@@ -6,6 +6,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif;
 }
 
-p, label, li, input {
+p, label, li, input, a {
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f8f8f8;
 }
