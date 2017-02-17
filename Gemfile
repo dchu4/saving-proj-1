@@ -37,6 +37,7 @@ gem 'jbuilder', '~> 2.5'
 
 #Gems installed by developer
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'invisible_captcha'
 
 
 group :development, :test do
