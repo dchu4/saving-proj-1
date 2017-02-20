@@ -1,0 +1,19 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700|Source+Sans+Pro:400,400i,700');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bitter', serif;
+}
+
+p, label, li, input, a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f8f8f8;
+}
