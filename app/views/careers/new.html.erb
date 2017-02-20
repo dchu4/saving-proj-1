@@ -1,0 +1,85 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+      <%= form_for @career do |f| %>
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :job_role, 'Job Role:' %><br>
+            <%= f.select :job_role, ['Certified Nursing Assistant', 'Licensed Practical Nurse', 'Registered Nurse'], class: 'form-control' %> 
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <%= f.label :first_name, 'First Name:' %>
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div>
+
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <%= f.label :middle_name, 'Middle Name:' %>
+            <%= f.text_field :middle_name, class: 'form-control' %>
+          </div>
+        
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <%= f.label :last_name, 'Last Name:' %>
+            <%= f.text_field :last_name, class: 'form-control' %>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <%= f.label :phone_number, 'Phone #:' %>
+          <%= f.text_field :phone_number, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :email, 'Email Address:' %>
+          <%= f.text_field :email, class: 'form-control' %>
+        </div>
+        
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-9">
+            <%= f.label :street_address, 'Address:' %>
+            <%= f.text_field :street_address, class: 'form-control' %>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :apt_number, 'Apt/Unit #:' %>
+            <%= f.text_field :apt_number, class: 'form-control' %>
+          </div>
+        </div>
+        
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :city, 'City:' %>
+            <%= f.text_field :city, class: 'form-control' %>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :state, 'State:' %><br>
+            <%= f.select :state, @us_states %>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :zip_code, 'Zip Code'%>
+            <%= f.text_field :zip_code, class: 'form-control' %>
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-3">
+            <%= f.label :country, 'Country:' %>
+            <%= f.text_field :country, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :resume, 'Upload Resume:' %>
+          <%= f.file_field :resume %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :referral, 'Name of Referrer:' %>
+          <%= f.text_field :referral, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit 'Apply' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

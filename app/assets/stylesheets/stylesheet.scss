@@ -20,7 +20,7 @@ p, label, li, input, a {
 }*/
 
 .section {
-  min-height: 200px;
+  min-height: 50vh;
 }
 
 .checklist ul {
@@ -34,4 +34,16 @@ p, label, li, input, a {
 .checklist li:before{
   content: "\e013";
   font-family: "Glyphicons Halflings";
+}
+
+select {
+  line-height: 34px;
+  height: 34px;
+  width: 100%;
+  margin-bottom: 5px;
+  background: #fff;
+}
+
+.container-fluid {
+  margin: 1%;
 }
