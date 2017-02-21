@@ -1,7 +1,7 @@
 include CareersHelper
 
 class CareersController < ApplicationController
-  # invisible_captcha only: [:create], honeypot: :subtitle
+  invisible_captcha only: [:create], honeypot: :subtitle
 
   def index
   end
@@ -13,7 +13,7 @@ class CareersController < ApplicationController
 
   def create
     @career = Career.new(career_params)
-
+    
     if @career.save
       ParamountMailer.job_application_email(@career).deliver_now
       redirect_to '/careers/thank_you'
