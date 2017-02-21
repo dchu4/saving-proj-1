@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   get '/pages/dementia_care' => 'pages#dementia_care'
   get '/pages/therapy' => 'pages#therapy'
 
+  get '/careers/thank_you' => 'careers#thank_you'
+  resources :careers, only: [:index, :new, :create, :show, :destroy]
+
   resources :contacts
 end

@@ -1,11 +1,13 @@
 class ContactsController < ApplicationController
   invisible_captcha only: [:create, :update], honeypot: :subtitle
+
   def new
     @contact = Contact.new
   end
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      ParamountMailer.contact_email(@contact).deliver_now
       flash[:notice] = "Thank you! We will respond promptly."
       redirect_to '/pages/contact'
     else

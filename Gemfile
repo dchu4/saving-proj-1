@@ -38,7 +38,7 @@ gem 'jbuilder', '~> 2.5'
 #Gems installed by developer
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'invisible_captcha'
-
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
