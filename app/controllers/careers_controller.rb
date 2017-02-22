@@ -8,14 +8,13 @@ class CareersController < ApplicationController
 
   def new
     @career = Career.new
-    @us_states = us_states
   end
 
   def create
     @career = Career.new(career_params)
     
     if @career.save
-      # ParamountMailer.job_application_email(@career).deliver_now
+      ParamountMailer.job_application_email(@career).deliver_now
       redirect_to '/careers/thank_you'
     else
       render :new

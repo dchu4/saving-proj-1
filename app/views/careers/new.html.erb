@@ -1,11 +1,18 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+      <% if @career.errors.any? %>
+        <% @career.errors.full_messages.each do |error|  %>
+          <p class="text-center" style="color: red"><%= error %></p>
+        <% end %>
+        <br><br>
+      <% end %>
+      
       <%= form_for @career do |f| %>
         <div class="form-group row">
           <div class="col-sm-12 col-md-12 col-lg-3">
             <%= f.label :job_role, 'Job Role:' %><br>
-            <%= f.select :job_role, ['Certified Nursing Assistant', 'Licensed Practical Nurse', 'Registered Nurse', 'Dietary', 'Housekeeping', 'Activities', 'Social Services', 'Receptionist', 'Office Manager'], class: 'form-control' %> 
+            <%= f.select :job_role, options_for_select(job_roles), class: 'form-control' %>
           </div>
         </div>
         
@@ -16,7 +23,7 @@
           </div>
 
           <div class="col-sm-12 col-md-4 col-lg-4">
-            <%= f.label :middle_name, 'Middle Name:' %>
+            <%= f.label :middle_name, 'Middle Name (optional):' %>
             <%= f.text_field :middle_name, class: 'form-control' %>
           </div>
         
@@ -33,7 +40,7 @@
 
         <div class="form-group">
           <%= f.label :email, 'Email Address:' %>
-          <%= f.text_field :email, class: 'form-control' %>
+          <%= f.email_field :email, class: 'form-control' %>
         </div>
         
         <div class="form-group row">
@@ -42,7 +49,7 @@
             <%= f.text_field :street_address, class: 'form-control' %>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :apt_number, 'Apt/Unit #:' %>
+            <%= f.label :apt_number, 'Apt/Unit # (optional):' %>
             <%= f.text_field :apt_number, class: 'form-control' %>
           </div>
         </div>
@@ -53,11 +60,11 @@
             <%= f.text_field :city, class: 'form-control' %>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :state, 'State:' %><br>
-            <%= f.select :state, @us_states %>
+            <%= f.label :state, 'State:', class: 'form' %><br>
+            <%= f.select :state, options_for_select(us_states), class: 'form-control' %>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :zip_code, 'Zip Code'%>
+            <%= f.label :zip_code, 'Zip Code:'%>
             <%= f.text_field :zip_code, class: 'form-control' %>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-3">
@@ -67,12 +74,12 @@
         </div>
 
         <div class="form-group">
-          <%= f.label :resume, 'Upload Resume:' %>
-          <%= f.file_field :resume %>
+          <%= f.label :resume, 'Upload Resume (pdf, docx, rtf, odt only):' %>
+          <%= f.file_field :resume, class: 'form-control-file' %>
         </div>
 
         <div class="form-group">
-          <%= f.label :referral, 'Name of Referrer:' %>
+          <%= f.label :referral, 'Name of Referrer (optional):' %>
           <%= f.text_field :referral, class: 'form-control' %>
         </div>
 
