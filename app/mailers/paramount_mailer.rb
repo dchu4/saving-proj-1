@@ -6,6 +6,7 @@ class ParamountMailer < ApplicationMailer
 
   def job_application_email(career)
     @career = career
+    attachments[@career.resume.file.filename] = File.read(@career.resume.file.file)
     mail( :from => @career.email, :to => 'danchu123@gmail.com',
     :subject => "#{@career.job_role} Job Application")
   end
