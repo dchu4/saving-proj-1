@@ -1,7 +1,7 @@
 module CareersHelper
   def us_states
     return [
-        ['Select State'],
+        ['Select'],
         ['Alabama', 'AL'],
         ['Alaska', 'AK'],
         ['Arizona', 'AZ'],
@@ -55,5 +55,20 @@ module CareersHelper
         ['Wisconsin', 'WI'],
         ['Wyoming', 'WY']
       ]
+    end
+
+    def job_roles
+        return [
+            'Select',
+            'Certified Nursing Assistant',
+            'Licensed Practical Nurse',
+            'Registered Nurse',
+            'Dietary',
+            'Housekeeping',
+            'Activities',
+            'Social Services',
+            'Receptionist',
+            'Office Manager'
+        ]
     end
 end

@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+en:
+  errors:
+    messages:
+      extension_whitelist_error: 'can only be a pdf, docx, rtf, or odt file'
