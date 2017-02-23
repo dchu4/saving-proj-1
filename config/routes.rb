@@ -11,5 +11,7 @@ Rails.application.routes.draw do
   get '/careers/thank_you' => 'careers#thank_you'
   resources :careers, only: [:index, :new, :create, :show, :destroy]
 
+  resources :posts
+
   resources :contacts
 end
