@@ -1,13 +1,11 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7CRaleway:300,400,400i,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
 }
 
 p, label, li, input, a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif !important;
 }
 
 /*.footer {
@@ -39,11 +37,12 @@ select {
   background: #fff;
 }
 
-.field_with_errors {
+/*.field_with_errors {
   @extend .has-error;
- }
+ }*/
 
-.container {
-  margin: 0;
-  padding: 0;
+.section-wrapper {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 10px;
 }

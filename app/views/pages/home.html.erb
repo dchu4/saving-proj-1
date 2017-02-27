@@ -5,7 +5,7 @@
       <li data-index="rs-1" data-transition="fade" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-rotate="0" data-thumb="assets/images/homepages/index-agency4/slide1-100x50.jpg" data-saveperformance="off" data-title="Agency">
 
         <!-- MAIN IMAGE -->
-        <img src="assets/images/homepages/index-agency4/slide1.jpg" alt="Slider bg 1" data-bgposition="center center" data-bgfit="cover" data-duration="11000" data-bgparallax="10" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+        <%= image_tag "woman-bench.jpg", alt: "Slider bg 1", "data-bgposition" => "center center", "data-bgfit" => "cover", "data-duration" => "11000", "data-bgparallax" => "10", "data-ease" => "Linear.easeNone", class: "rev-slidebg" %>
         <!-- LAYERS -->
 
         <!-- overlay -->
@@ -72,7 +72,7 @@
               Let's make world a better place!
         </div>
 
-        <a class="tp-caption btn btn-lg btn-custom min-width tp-resizeme rs-parallaxlevel-0" 
+        <a class="tp-caption btn btn-lg btn-custom2 min-width tp-resizeme rs-parallaxlevel-0" 
           data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
           data-y="['center','center','center','center']" data-voffset="['102','96','86','84']" 
           data-witdh="none"
@@ -91,7 +91,7 @@
       <li data-index="rs-2" data-transition="fade" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-rotate="0" data-thumb="assets/images/homepages/index-agency4/slide2-100x50.jpg" data-saveperformance="off" data-title="Creative">
 
         <!-- MAIN IMAGE -->
-        <img src="assets/images/homepages/index-agency4/slide2.jpg" alt="Slider bg 2" data-bgposition="center center" data-bgfit="cover" data-duration="11000" data-bgparallax="10" data-ease="Linear.easeNone" class="rev-slidebg" data-no-retina>
+        <%= image_tag "oldpeople2.jpg", alt: "Slider bg 2", "data-bgposition" => "center center", "data-bgfit" => "cover", "data-duration" => "11000", "data-bgparallax" => "10", "data-ease" => "Linear.easeNone", class: "rev-slidebg" %>
         <!-- LAYERS -->
 
         <!-- overlay -->
@@ -170,7 +170,7 @@
           data-style_hover="bg:#0069b0;c:#fff;bc:#0069b0;s:300;e:Linear.easeNone;" 
           data-responsive_offset="on" 
           style="z-index: 7;"
-          href="#">Get in touch!
+          href="#">Contact Us
         </a>
       </li>
     </ul>
@@ -178,49 +178,58 @@
   </div><!-- End #rev_slider -->
 </div><!-- END REVOLUTION SLIDER -->
 
-<div class="container">
-  <div class="row section">
-    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-      <h2 class="title text-center mb35">Welcome!</h2>
-      <h3>We’re pleased that you are considering Paramount of Oak Park as a short or long term residence for yourself or your loved one.</h3>
-      <h4>Before you read any further, there is one thing we want you to know.</h4>
-    </div>
-  </div>
-
-  <div class="mb50"></div>
-
-  <div class="row">
-    <div class="col-sm-12 col-md-12 col-lg-12 text-center">
-      <h2 class="title text-center mb35">We want you to feel at home.</h2>
-      <h4>At Paramount of Oak Park, you are part of our family.  As a resident, or family member of a resident, we welcome you and want you to feel as comfortable as possible.</h4>
-    </div>
+<div class="pt50 pb45 pt45-xs text-center">
+  <div class="section-wrapper">
+    <h2 class="title text-center mb35">Welcome!</h2>
+    <h4>We’re pleased that you are considering Paramount of Oak Park as a short or long term residence for yourself or your loved one.</h4>
+    <h4>Before you read any further, there is one thing we want you to know.</h4>
+    <h3 class="mb20">We want you to feel at home.</h3>
+    <h4>At Paramount of Oak Park, you are part of our family.  As a resident, or family member of a resident, we welcome you and want you to feel as comfortable as possible.</h4>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-sm-12 col-md-12 col-lg-5 col-lg-offset-1">
-  </div>
-  <div class="col-sm-12 col-md-12 col-lg-5">
-    <h4>We offer:</h4>
-    <ul>
-      <li>A full service nursing center</li>
-      <li>A complete restorative therapy program</li>
-      <li>Short term stays for respite, recovery/rehabilitation</li>
-      <li>Hospice care</li>
-      <li>Dementia services</li>
-      <li>State of the art rehabilitative equipment</li>
-      <li>Professional, friendly, and caring health professionals</li>
-    </ul>
-    <br>
-    <h4>We invite you to visit us</h4>
-    <p>Come for a meal, take a tour, and discover how our family can care for your family.</p>
-    <p>We thank you for considering Paramount of Oak Park as the place for you or your loved one to call home for however long you need us. It is “paramount” to us to provide a comfortable and friendly environment, and we are proud of our facility and our staff.</p>
-  </div>
+<div class="table-row bg-white border">
+  <div class="table-cell cell-image overlay-container video-btn-section" style="background-image:url(assets/images/backgrounds/index-agency4/bg1.jpg)">
 
-  <div class="mb50"></div>
+    <div class="overlay custom"></div><!-- End .overlay -->
+  </div><!-- End .table-cell -->
+  <div class="table-cell cell-content">
+    <div class="row">
+      <div class="col-xs-12 col-xss-12">
+        <h4>We offer:</h4>
+        <ul style="list-style: disc; margin-left: 20px">
+          <li>A full service nursing center</li>
+          <li>A complete restorative therapy program</li>
+          <li>Short term stays for respite, recovery/rehabilitation</li>
+          <li>Hospice care</li>
+          <li>Dementia services</li>
+          <li>State of the art rehabilitative equipment</li>
+          <li>Professional, friendly, and caring health professionals</li>
+        </ul>
+      </div><!-- End .col-xs-6 -->
+    </div><!-- End .row -->
+  </div><!--End .table-cell  -->
+</div><!-- End .table-row -->
 
-  <div class="row section">
-    <div class="col-sm-12 col-md-12 col-lg-5 col-lg-offset-1 checklist">
+<div class="table-row bg-white border">
+  <div class="table-cell cell-content">
+    <div class="row">
+      <div class="col-xs-12 col-xss-12">
+        <h4>We invite you to visit us</h4>
+        <p>Come for a meal, take a tour, and discover how our family can care for your family.</p>
+        <p>We thank you for considering Paramount of Oak Park as the place for you or your loved one to call home for however long you need us. It is “paramount” to us to provide a comfortable and friendly environment, and we are proud of our facility and our staff.</p>
+      </div><!-- End .col-xs-6 -->
+    </div><!-- End .row -->
+  </div><!--End .table-cell  -->
+  <div class="table-cell cell-image overlay-container video-btn-section"  style="background-image:url(assets/images/backgrounds/index-agency4/bg2.jpg
+
+    <div class="overlay custom"></div><!-- End .overlay -->
+  </div><!-- End .table-cell -->
+</div><!-- End .table-row -->
+
+<div class="pt50 pb45 pt45-xs">
+  <div class="section-wrapper">
+    <div class="checklist">
       <h2 class="title text-center mb35">Services</h2>
       <h4>Listed below are just some of the specialized services we offer to you</h4>
       <ul>
@@ -239,7 +248,12 @@
         <li> &nbsp; Private Pay, Medicare, Medicaid and Some Private Insurance accepted</li>
       </ul>
     </div>
-    <div class="col-sm-12 col-md-12 col-lg-5 checklist">
+  </div>
+</div>
+
+<div class="overlay-container pt50 pb45 pt45-xs">
+  <div class="section-wrapper">
+    <div class="checklist">
       <h2 class="title text-center mb35">Amenities and Activities</h2>
       <h4>Paramount of Oak Park is a full service residence – and we are proud to provide a beautiful, bright, attractive facility which offers ample opportunities for entertainment and outings.</h4>
       <ul>
@@ -257,39 +271,49 @@
         <li> &nbsp; Rehabilitation Unit</li>
       </ul>
     </div>
+    <div class="overlay custom"></div>
   </div>
-
-  <div class="mb50"></div>
-
-  <div class="row section">
-    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-      <h2 class="title text-center mb35">Social Services</h2>
-        <p>Transitions can be hard for everyone involved. If you or a loved one is being transferred to a rehabilitative facility, you probably have many questions and concerns.</p>
-        <p>We want to help.</p>
-        <p>Our staff of professional social workers will help ease those transitions and become part of your care team.  They will continue to provide support, answer questions, and work with you to find solutions for every problem that arises.</p>
-        <p>If paperwork and insurance issues are becoming confusing, the Social Services Department  will work with you to explain how and what to do, and will work with you to make any necessary arrangements upon discharge.  If needed, a social worker can also help with Advance Directives or arranging hospice services.</p>
-    </div>
-  </div>
-
-  <div class="mb50"></div>
-
-  <div class="row section">
-    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-      <h2 class="title text-center mb35">Rooms</h2>
-        <p>We offer both Semi-Private and Private rooms.</p> 
-        <p>Each room is well-designed to feel homey while remaining functional.</p>
-        <p>Want to make your room feel more like home?  Feel free to bring items from home to personalize and decorate your room!</p>
-    </div>
-  </div>
-
-  <div class="mb50"></div>
-
-  <div class="row section">
-    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-      <h2 class="title text-center mb35">Care Is Paramount</h2>
-        <p>We can never say enough about our devotion to our residents and their comfort, both physical and emotional.  Our residents, their families, and their friends are part of our own family and will be treated with utmost respect and dedication.  Come visit us and see for yourself.</p>
-    </div>
-  </div>
-
-  <div class="mb50"></div>
 </div>
+
+<div class="pt50 pb45 pt45-xs text-center">
+  <div class="section-wrapper">
+    <h2 class="title text-center mb20">Social Services</h2>
+    <p>Transitions can be hard for everyone involved. If you or a loved one is being transferred to a rehabilitative facility, you probably have many questions and concerns.</p>
+    <p>We want to help.</p>
+    <p>Our staff of professional social workers will help ease those transitions and become part of your care team.  They will continue to provide support, answer questions, and work with you to find solutions for every problem that arises.</p>
+    <p>If paperwork and insurance issues are becoming confusing, the Social Services Department  will work with you to explain how and what to do, and will work with you to make any necessary arrangements upon discharge.  If needed, a social worker can also help with Advance Directives or arranging hospice services.</p>
+  </div><!-- End .testimonial-container -->
+</div>
+
+<div class="table-row bg-white border">
+    <div class="table-cell cell-image overlay-container video-btn-section" style="background-image:url(assets/images/backgrounds/index-agency4/bg1.jpg)">
+  
+
+        <div class="overlay custom"></div><!-- End .overlay -->
+    </div><!-- End .table-cell -->
+    <div class="table-cell cell-content">
+        <div class="row">
+            <div class="col-xs-12 col-xss-12">
+              <h2 class="title text-center mb20">Rooms</h2>
+              <p>We offer both Semi-Private and Private rooms.</p> 
+              <p>Each room is well-designed to feel homey while remaining functional.</p>
+              <p>Want to make your room feel more like home?  Feel free to bring items from home to personalize and decorate your room!</p>
+            </div><!-- End .col-xs-6 -->
+        </div><!-- End .row -->
+    </div><!--End .table-cell  -->
+</div><!-- End .table-row -->
+
+<div class="table-row bg-white border">
+    <div class="table-cell cell-content">
+        <div class="row">
+            <div class="col-xs-12 col-xss-12">
+              <h2 class="title text-center mb20">Care Is Paramount</h2>
+              <p>We can never say enough about our devotion to our residents and their comfort, both physical and emotional.  Our residents, their families, and their friends are part of our own family and will be treated with utmost respect and dedication.  Come visit us and see for yourself.</p>
+            </div><!-- End .col-xs-6 -->
+        </div><!-- End .row -->
+    </div><!--End .table-cell  -->
+    <div class="table-cell cell-image overlay-container video-btn-section"  style="background-image:url(assets/images/backgrounds/index-agency4/bg2.jpg)">
+
+        <div class="overlay custom"></div><!-- End .overlay -->
+    </div><!-- End .table-cell -->
+</div><!-- End .table-row -->

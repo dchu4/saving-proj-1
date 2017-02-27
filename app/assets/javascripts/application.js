@@ -12,12 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require plugins.min
-//= require main
-//= require modernizr
 //= require vue
 //= require videojs-ie8
-//= require bootstrap-sprockets
+//= require bootstrap
 //= require plugins.min
 //= require jquery.validate.min
 //= require contact
