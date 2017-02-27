@@ -3,9 +3,10 @@
   <head>
     <title>ParamountWebsite</title>
     <%= csrf_meta_tags %>
+    <%= include_gon(:init => true) %>
+    <%= Gon::Base.render_data({}) %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -42,12 +43,9 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <!-- <div class="container-fluid"> -->
+    <div class="container-fluid">
       <%= yield %>
-    <!-- </div> -->
-    <footer class="footer">
-      <div class="container">
-      </div>
-    </footer>
+    </div>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

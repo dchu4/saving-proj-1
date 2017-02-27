@@ -13,6 +13,8 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 require 'fog/aws'
 
+# config.assets.enabled = true
+# config.assets.paths << Rails.root.join("app", "assets", "images", "aboutslider")
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
