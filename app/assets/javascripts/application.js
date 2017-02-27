@@ -12,6 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require plugins.min
+//= require main
+//= require modernizr
+//= require vue
+//= require videojs-ie8
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
