@@ -16,4 +16,7 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def theme
+  end
 end
