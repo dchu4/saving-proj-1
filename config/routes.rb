@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get '/careers/thank_you' => 'careers#thank_you'
   resources :careers, only: [:index, :new, :create, :show, :destroy]
 
+  get '/tours/thank_you' => 'tours#thank_you'
+  resources :tours
+
   resources :posts
 
   resources :contacts
