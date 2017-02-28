@@ -15,10 +15,9 @@
 //= require vue
 //= require videojs-ie8
 //= require bootstrap
-//= require plugins.min
+//= require plugins
 //= require jquery.validate.min
 //= require contact
-//= require plugins.min
 //= require modernizr
 //= require main
 //= require slider
@@ -33,5 +32,4 @@
 //= require revolution.extension.parallax.min
 //= require revolution.extension.slideanims.min
 //= require revolution.extension.video.min
-//= require turbolinks
 //= require_tree .

@@ -6,7 +6,7 @@
     <%= include_gon(:init => true) %>
     <%= Gon::Base.render_data({}) %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -43,10 +43,10 @@
             <div class="collapse navbar-collapse" id="main-nav-container">
               <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="#" role="button" aria-expanded="false">Home</a></li>
+                <li><a href="/" role="button" aria-expanded="false">Home</a></li>
 
                 <li>
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Care<span class="caret"></span></a>
+                  <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Care<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                       <li><a href="/pages/circle_of_care">Circle of Care</a></li>
                       <li><a href="/pages/wound_care">Wound Care</a></li>
@@ -84,12 +84,11 @@
         <div class="row">
           <div class="col-md-5">
             <div class="widget about-widget">
-              <img src="assets/images/footer-logo.png" alt="Simple Footer Logo">
+              <%= image_tag 'logo.png', alt: 'Logo', width: '150px' %>
               <hr>
                 <label>Visit Us:</label>
-                625 N. Harlem Ave. Oak Park IL. 60302
-              </address><br>
-              <label>Call Us:</label> +1 (708)-848-5966<br>
+                <a href="https://www.google.com/maps/place/625+N+Harlem+Ave,+Oak+Park,+IL+60302">625 N. Harlem Ave. Oak Park IL. 60302</a><br>
+              <label>Call Us:</label> <a href="tel:+17088485966">(708)-848-5966</a><br>
               <label>Write Us:</label> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a>
             </div><!-- End .widget -->
           </div><!-- End .col-md-5 -->
@@ -102,18 +101,19 @@
 
                     <div class="col-md-4">
                       <ul class="fa-ul">
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>About us</a></li>
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Services</a></li>
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Features</a></li>
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Portfolio</a></li>
+                        <li><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Care</li>
+                        <li><a href="/pages/circle_of_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Circle of Care</a></li>
+                        <li><a href="/pages/wound_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Wound Care</a></li>
+                        <li><a href="/pages/dementia_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Dementia Care</a></li>
                       </ul>
                     </div>
 
                     <div class="col-md-4">
                       <ul class="fa-ul">
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Blog</a></li>
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Support</a></li>
-                        <li><a href="#"><i class="fa-li fa fa-chain"></i>Contact Us</a></li>
+                        <li><a href="/pages/therapy"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Therapy</a></li>
+                        <li><a href="/careers/new"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Careers</a></li>
+                        <li><a href="/about"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>About</a></li>
+                        <li><a href="/pages/contact"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Contact</a></li>
                       </ul>
                     </div>
 
@@ -125,5 +125,7 @@
         </div><!-- End .row -->
       </div><!-- End .container -->
     </footer><!-- End .footer -->
+
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
