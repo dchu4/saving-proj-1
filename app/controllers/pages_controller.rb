@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @tour = Tour.new
   end
 
   def circle_of_care

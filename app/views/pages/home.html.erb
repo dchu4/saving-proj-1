@@ -228,38 +228,34 @@
 </div><!-- End .table-row -->
 
 <div class="quick-form-container bg-custom pt50 pb40 pb50-sm">
-    <div class="container">
-        <h2 class="title text-white mb35">Book a Tour</h2>
-        <form action="#" class="row">
-            <div class="col-lg-10 col-md-10 col-sm-12">
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-12">
-                        <label>Full name</label>
-                        <input type="text" class="form-control" id="contactname" name="contactname" placeholder="Name" required>
-                    </div><!-- End .col-md-3 -->
-                    <div class="col-lg-3 col-md-3 col-sm-12">
-                        <label>Email</label>
-                        <input type="email" class="form-control" id="contactemail" name="contactemail" placeholder="Email" required>
-                    </div><!-- End .col-md-3 -->
-                    <div class="col-lg-3 col-md-3 col-sm-12">
-                        <label>Department</label>
-                        <select class="form-control">
-                            <option value="Department Name">Department Name</option>
-                            <option value="Department Name">Department Name</option>
-                            <option value="Department Name">Department Name</option>
-                            <option value="Department Name">Department Name</option>
-                        </select>
-                    </div><!-- End .col-md-3 -->
-                    <div class="col-lg-3 col-md-3 col-sm-12" style="margin-top: 27px">
-                        <input type="submit" class="btn btn-custom2 btn-block" value="Submit">
-                    </div><!-- End .col-md-3 -->
-                </div><!-- End .row -->
-            </div><!-- End .col-md-10 -->
+  <div class="container">
+    <h2 class="title text-white mb35">Book a Tour</h2>
+      <div class="row">
+        <%= form_for @tour, url: url_for(controller: 'tours', action: 'create') do |f| %>
+          <div class="col-lg-3 col-md-2 col-sm-12">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: 'form-control' %>
+          </div><!-- End .col-md-2 -->
+          <div class="col-lg-3 col-md-2 col-sm-12">
+            <%= f.label :email %>
+            <%= f.text_field :email, class: 'form-control' %>
+          </div><!-- End .col-md-2 -->
+          <div class="col-lg-2 col-md-2 col-sm-12">
+            <%= f.label :tour_date %>
+            <%= f.text_field :tour_date, class: "form-control flatpickr_calendar", placeholder: "Select Date.." %>
+          </div><!-- End .col-md-2 -->
+          <div class="col-lg-2 col-md-2 col-sm-12">
+            <%= f.label :tour_time %>
+            <%= f.text_field :tour_time, class: "form-control flatpickr_time", placeholder: "Select Time.." %>
+          </div><!-- End .col-md-2 -->
+          <div class="col-lg-2 col-md-2 col-sm-12" style="margin-top: 27px">
+            <%= f.submit 'Book', class: "btn btn-custom2 btn-block" %>
+          </div><!-- End .col-md-2 -->
+        <% end %>
+      </div><!-- End .row -->
 
-            <div class="clearfix mb10 visible-sm visible-xs"></div><!-- margin -->
-
-        </form>
-    </div><!-- End .container -->
+      <div class="clearfix mb10 visible-sm visible-xs"></div><!-- margin -->
+  </div><!-- End .container -->
 </div><!-- End .quick-form-container -->
 
 <div class="pt50 pb45 pt45-xs bg-white">
