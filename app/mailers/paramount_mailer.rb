@@ -4,9 +4,10 @@ require 'open-uri'
 # require 'net/https'
 
 class ParamountMailer < ApplicationMailer
-  def book_a_tour_email(email)
-    mail( :to => user_email,
-    :subject => 'Thanks for signing up for our amazing app' )
+  def tour_email(tour)
+    @tour = tour
+    mail(:from => @tour.email, :to => "danchu123@gmail.com", :bcc => @tour.email,
+    :subject => 'Tour Sign-up' )
   end
 
   def job_application_email(career)
@@ -16,8 +17,9 @@ class ParamountMailer < ApplicationMailer
     :subject => "#{@career.job_role} Job Application")
   end
 
-  def contact_email(email)
-    mail( :to => user_email,
-    :subject => 'Thanks for signing up for our amazing app' )
+  def contact_email(contact)
+    @contact = contact
+    mail(:from => @contact.email, :to => "danchu123@gmail.com",
+    :subject => 'Paramount Contact' )
   end
 end

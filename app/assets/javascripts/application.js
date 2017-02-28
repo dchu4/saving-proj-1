@@ -15,6 +15,8 @@
 //= require vue
 //= require videojs-ie8
 //= require bootstrap
+//= require flatpickr
+//= require flatpickrInputSettings
 //= require plugins
 //= require jquery.validate.min
 //= require contact
