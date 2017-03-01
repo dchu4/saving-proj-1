@@ -4,22 +4,28 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <% if notice %>
+<% if notice %>
+  <div class="container">
+    <div class="row">
       <div class="alert alert-dismissible alert-success">
         <button type="button" class="close" data-dismiss="alert">×</button>
-        <h4 class="notice"><%= notice %><h4>
+        <h4 class="notice"><%= notice %></h4>
       </div>
-    <% end %>
-    <% if alert %>
+    </div>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="container">
+    <div class="row">
       <div class="alert alert-dismissible alert-danger">
         <button type="button" class="close" data-dismiss="alert">×</button>
         <h4 class="notice"><%= alert %></h4>
       </div>
-    <% end %>
+    </div>
   </div>
+<% end %>
 
+<div class="container mb50">
   <div class="row">
     <div class="col-md-7">
       <h3 class="mb30">Send Us A Message</h3>
@@ -48,25 +54,19 @@
       <% end %>
     </div><!-- End .col-md-7 -->
 
-    <div class="clearfix mb65 visible-sm visible-xs"></div><!-- margin -->
+    <div class="clearfix mb30 visible-sm visible-xs"></div><!-- margin -->
 
     <div class="col-md-5">
       <!-- <div id="map" class="vertical"></div> --><!-- End #map -->  
 
-      <div class="contact-box mb30">
+      <div class="contact-box">
         <h3>Location</h3>
         <ul>
           <li><strong>Address:</strong> <a href="https://www.google.com/maps/place/625+N+Harlem+Ave,+Oak+Park,+IL+60302">625 N. Harlem Ave. Oak Park IL. 60302</a></li>
           <li><strong>Phone</strong> <a href="tel:+17088485966">(708)-848-5966</a></li>
-          <li><strong>Email:</strong> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a>
+          <li><strong>Email:</strong> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a></li>
         </ul>
       </div><!-- End .contact-box -->
     </div><!-- End .col-md-5 -->
   </div><!-- End .row -->
-
-  <div class="mb70 hidden-xs"></div><!-- margin -->
-
-  </div><!-- End .row -->
-</div><!-- End .container -->
-
-<div class="mb60"></div><!-- margin -->
+</div>
