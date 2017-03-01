@@ -12,22 +12,22 @@
 
   <body>
     <div id="page-loader">
-        <div class="sk-wave">
-            <div class="sk-rect sk-rect1"></div><!-- End .sk-rect -->
-            <div class="sk-rect sk-rect2"></div><!-- End .sk-rect -->
-            <div class="sk-rect sk-rect3"></div><!-- End .sk-rect -->
-            <div class="sk-rect sk-rect4"></div><!-- End .sk-rect -->
-            <div class="sk-rect sk-rect5"></div><!-- End .sk-rect -->
-        </div><!-- End .sk-wave -->
+      <div class="sk-wave">
+        <div class="sk-rect sk-rect1"></div><!-- End .sk-rect -->
+        <div class="sk-rect sk-rect2"></div><!-- End .sk-rect -->
+        <div class="sk-rect sk-rect3"></div><!-- End .sk-rect -->
+        <div class="sk-rect sk-rect4"></div><!-- End .sk-rect -->
+        <div class="sk-rect sk-rect5"></div><!-- End .sk-rect -->
+      </div><!-- End .sk-wave -->
     </div><!-- End #page-loader -->
 
     <div id="wrapper">
       <header class="header header2 gray sticky-header">
         <div class="header-inner">
           <div class="container">
-            <a href="/" class="site-logo" title="Paramount Rehab">
-              <%= image_tag 'logo.png', alt: 'Paramount Logo', width: '50px' %>
-              <span class="sr-only">Paramount Rehab</span>
+            <a href="/" class="site-logo" title="Paramount of Oak Park">
+              <%= image_tag 'logo-top.png', alt: 'Paramount Logo', width: '100px' %>
+              <span class="sr-only">Paramount of Oak Park</span>
             </a>
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-container" aria-expanded="false">
@@ -46,27 +46,17 @@
                 <li><a href="/" role="button" aria-expanded="false">Home</a></li>
 
                 <li>
-                  <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Care<span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Care<span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
-                      <li><a href="/pages/circle_of_care">Circle of Care</a></li>
-                      <li><a href="/pages/wound_care">Wound Care</a></li>
-                      <li><a href="/pages/dementia_care">Dementia Care</a></li>
+                    <li><a href="/pages/circle_of_care">Circle of Care</a></li>
+                    <li><a href="/pages/wound_care">Wound Care</a></li>
+                    <li><a href="/pages/dementia_care">Dementia Care</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="/pages/therapy" role="button" aria-expanded="false"><span>Therapy</span></a>
-                </li>
-                <li>
-                  <a href="/pages/careers" role="button" aria-expanded="false">Careers</a>
-                </li>
-                <li>
-                  <a href="/pages/about" role="button" aria-expanded="false">About</a>
-                </li>
-                <li>
-                  <a href="/pages/contact" role="button" aria-expanded="false">Contact</a>
-                </li>
-              </ul>
-            </li>
+                <li><a href="/pages/therapy" role="button" aria-expanded="false"><span>Therapy</span></a></li>
+                <li><a href="/pages/careers" role="button" aria-expanded="false">Careers</a></li>
+                <li><a href="/pages/about" role="button" aria-expanded="false">About</a></li>
+                <li><a href="/pages/contact" role="button" aria-expanded="false">Contact</a></li>
 
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -74,50 +64,51 @@
           </div><!-- End .container -->
         </div><!-- End .header-inner -->
       </header><!-- End .header -->
+    </div>
 
-      <div class="main">
-        <%= yield %>
-      </div>
+    <div class="main">
+      <%= yield %>
+    </div>
 
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-4">
             <div class="widget about-widget">
-              <%= image_tag 'logo.png', alt: 'Logo', width: '150px' %>
+              <%= image_tag 'logo.png', alt: 'Logo', width: '200px' %>
               <hr>
                 <label>Visit Us:</label>
-                <a href="https://www.google.com/maps/place/625+N+Harlem+Ave,+Oak+Park,+IL+60302">625 N. Harlem Ave. Oak Park IL. 60302</a><br>
+                <a href="https://www.google.com/maps/place/625+N+Harlem+Ave,+Oak+Park,+IL+60302">625 N. Harlem Ave. Oak Park, IL. 60302</a><br>
               <label>Call Us:</label> <a href="tel:+17088485966">(708)-848-5966</a><br>
               <label>Write Us:</label> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a>
             </div><!-- End .widget -->
           </div><!-- End .col-md-5 -->
-          <div class="col-md-6 col-md-offset-1">
+          <div class="col-md-5 col-md-offset-3">
             <div class="row">
 
-              <div class="widget">
-                  <h4 class="widget-title">Paramount Rehab</h4>
-                  <div class="row">
+              <div class="widget links-widget">
+                <h4 class="widget-title">Paramount of Oak Park</h4>
+                <div class="row">
 
-                    <div class="col-md-4">
-                      <ul class="fa-ul">
-                        <li><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Care</li>
-                        <li><a href="/pages/circle_of_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Circle of Care</a></li>
-                        <li><a href="/pages/wound_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Wound Care</a></li>
-                        <li><a href="/pages/dementia_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Dementia Care</a></li>
-                      </ul>
-                    </div>
-
-                    <div class="col-md-4">
-                      <ul class="fa-ul">
-                        <li><a href="/pages/therapy"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Therapy</a></li>
-                        <li><a href="/pages/careers/"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Careers</a></li>
-                        <li><a href="/pages/about"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>About</a></li>
-                        <li><a href="/pages/contact"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Contact</a></li>
-                      </ul>
-                    </div>
-
+                  <div class="col-md-4">
+                    <ul class="fa-ul">
+                      <li><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Care</li>
+                      <li><a href="/pages/circle_of_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Circle of Care</a></li>
+                      <li><a href="/pages/wound_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Wound Care</a></li>
+                      <li><a href="/pages/dementia_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Dementia Care</a></li>
+                    </ul>
                   </div>
+
+                  <div class="col-md-4">
+                    <ul class="fa-ul">
+                      <li><a href="/pages/therapy"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Therapy</a></li>
+                      <li><a href="/pages/careers/"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Careers</a></li>
+                      <li><a href="/pages/about"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>About</a></li>
+                      <li><a href="/pages/contact"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Contact</a></li>
+                    </ul>
+                  </div>
+
+                </div>
               </div><!-- End .widget -->
 
             </div><!-- End .row -->
