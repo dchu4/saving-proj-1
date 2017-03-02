@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#home'
   get '/pages/contact' => 'pages#contact'
@@ -20,4 +21,6 @@ Rails.application.routes.draw do
   resources :videos
 
   resources :contacts
+
+  resources :components
 end
