@@ -1,0 +1,14 @@
+<div id="<%= name %>Display"><%= sanitize component.body %></div>
+
+<%= form_for component do |f| %>
+
+  <%= f.text_area :body, id: "#{name}Body", class: 'invisible' %>
+  
+  <div class="text-center">
+    <button id="<%= name %>Edit" class="btn btn-primary" onclick="edit(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Edit</button>
+
+    <%= f.submit 'Save', class: "btn btn-success invisible", id: "#{name}Save" %>
+    
+    <button id="<%= name %>Cancel" class="btn btn-danger invisible" onclick="cancel(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Cancel</button>
+  </div>
+<% end %>

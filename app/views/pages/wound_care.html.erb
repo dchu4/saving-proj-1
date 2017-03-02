@@ -1,20 +1,10 @@
 <div class="jumbotron bg-custom text-white">
   <div class="container-fluid">
-    <h2 class="text-center">Wound Care</h2>
+    <h2 class="text-center"><%= @wound_care.title %></h2>
   </div>
 </div>
 
 <div class="section-wrapper mb20">
-  <p>Paramount of Oak Park offers the latest techniques and therapies for wound care.  Our team is specially trained in this area, and we are proud of our many accomplishments, and especially of the many residents whom we have been able to help.</p>
-
-  <p>Whether the wound care therapy program is a short or long term one, we are ready to welcome you or your loved one, and create a comfortable and warm environment in which to continue the healing process.</p>
-
-  <p>Some of our wound care specialties include:</p>
-  <ul style="list-style: disc; margin-left: 20px">
-    <li>Certified Wound Care Nurse on site 7 days a week</li>
-    <li>Wound-Vac Therapy- Now featuring the new PICO therapy system</li>
-    <li>Pressure relieving devices</li>
-    <li>E-Stim Therapy</li>
-  </ul>
+  <%= render partial: 'components/component', locals: { component: @wound_care, name: 'wound_care' } %>
 </div>
 

@@ -16,6 +16,7 @@
 //= require vue
 //= require videojs-ie8
 //= require bootstrap
+//= require summernote
 //= require flatpickr
 //= require flatpickrInputSettings
 //= require plugins
