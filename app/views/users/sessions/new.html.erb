@@ -1,0 +1,42 @@
+<div class="bg-custom text-white section-heading">
+  <div class="container-fluid">
+    <h2 class="text-center">Admin Login</h2>
+  </div>
+</div>
+
+<div class="section-wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+      
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <%= f.label :email, 'Email:' %><br />
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, 'Password:' %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </div>
+
+        <% if devise_mapping.rememberable? -%>
+          <div class="form-group">
+            <%= f.check_box :remember_me %>
+            <%= f.label :remember_me %>
+          </div>
+        <% end -%>
+
+        <div class="form-group">
+          <%= f.submit 'Log in', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+        </div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>
+
+<div class="mb50"></div>
