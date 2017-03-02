@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'pages#home'
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
   get '/pages/dementia_care' => 'pages#dementia_care'
   get '/pages/therapy' => 'pages#therapy'
   get '/pages/about' => 'pages#about'
+  get '/pages/admin_dashboard' => 'pages#admin_dashboard'
 
   get '/pages/careers' => 'careers#new'
   get '/careers/thank_you' => 'careers#thank_you'

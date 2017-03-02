@@ -9,10 +9,10 @@ class ImagesController < ApplicationController
   end
 
   def create
-    @image = Image.create(image_params)
+    @image = Image.new(image_params)
 
-    if @post.save
-      render :new
+    if @image.save
+      redirect_to '/pages/admin_dashboard'
     else
       render :new
     end
@@ -36,9 +36,9 @@ class ImagesController < ApplicationController
 
   def image_params
     params.require(:image).permit(
-      :post_source,
-      :post_type,
-      :post_caption
+      :image_source,
+      :image_title,
+      :image_caption
       )
   end
 end

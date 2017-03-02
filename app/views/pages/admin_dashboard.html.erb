@@ -1,0 +1,133 @@
+<div class="bg-custom text-white section-heading">
+  <div class="container-fluid">
+    <h2 class="text-center">Admin Dashboard</h2>
+  </div>
+</div>
+
+<div class="container-fluid pt10">
+  <div class="row">
+
+    <div class="col-md-6"><!-- IMAGES START -->
+      <h2 class="text-center section-heading bg-custom text-white">Images</h2>
+
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Image</button>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Image</h4>
+            </div>
+            
+            <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+                  
+                  <%= form_for @image, :url => { :controller=>"images", :action => "create" } do |f| %>
+                    <div class="form-group row">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <%= f.label :image_title, 'Image Title:' %>
+                        <%= f.text_field :image_title, class: 'form-control' %>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.label :image_source, 'Image Source:' %>
+                      <%= f.file_field :image_source, class: 'form-control' %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.label :image_caption, 'Caption:' %>
+                      <%= f.text_area :image_caption, class: 'form-control' %>
+                    </div>
+                    
+                    <div class="form-group">
+                      <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div> <!-- END SECTION WRAPPER -->
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div><!-- IMAGES END -->
+
+    <div class="col-md-6"><!-- VIDEOS START -->
+      <h2 class="text-center section-heading bg-custom text-white">Videos</h2>
+
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Add Video</button>
+
+      <!-- Modal -->
+      <div id="myModal2" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Add Video</h4>
+            </div>
+            
+            <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+                  
+                  <%= form_for @video, :url => { :controller=>"videos", :action => "create" } do |f| %>
+                    <div class="form-group row">
+                      <div class="col-sm-12 col-md-12 col-lg-12">
+                        <%= f.label :video_title, 'Video Title:' %>
+                        <%= f.text_field :video_title, class: 'form-control' %>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.label :video_source, 'Video Source:' %>
+                      <%= f.text_field :video_source, class: 'form-control' %>
+                    </div>
+
+                    <div class="form-group">
+                      <%= f.label :video_caption, 'Caption:' %>
+                      <%= f.text_area :video_caption, class: 'form-control' %>
+                    </div>
+                    
+                    <div class="form-group">
+                      <%= f.submit 'Submit', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div> <!-- END SECTION WRAPPER -->
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+    </div><!-- VIDEOS END -->
+  </div>
+</div>

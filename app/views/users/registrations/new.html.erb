@@ -1,0 +1,46 @@
+<div class="bg-custom text-white section-heading">
+  <div class="container-fluid">
+    <h2 class="text-center">Admin Sign Up</h2>
+  </div>
+</div>
+
+<div class="section-wrapper">
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+      
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <%= f.label :email, 'Email:' %><br />
+            <%= f.email_field :email, autofocus: true, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :password, 'Password:' %>
+          <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <%= f.submit 'Sign Up', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+        </div>
+      <% end %>
+
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>
+
+<div class="mb50"></div>
