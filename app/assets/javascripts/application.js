@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require summernote
 //= require vue
 //= require videojs-ie8
 //= require bootstrap

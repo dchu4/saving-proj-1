@@ -1,0 +1,100 @@
+<div class="bg-white">
+  <div class="bg-custom text-white section-heading">
+    <div class="container-fluid">
+      <h2 class="text-center" style="font-size: 3em">About Us</h2>
+    </div>
+  </div>
+  <div class="container" style="height:100%;line-height: 100%;">
+      <div class="row mb30 pt30">
+          <div class="col-md-6">
+              <h2 class="title custom mb25">Learn more about us</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci fuga commodi deleniti fugiat harum iste quibusdam reprehenderit vitae vel dolores accusamus neque aut similique unde, temporibus ex, magni perspiciatis molestias.</p>
+              <p>Corporis ad commodi perferendis distinctio enim, omnis autem alias est tenetur cupiditate odio quisquam velit magnam nulla vero, reprehenderit! Voluptate enim quo excepturi eius nam perspiciatis a sint iste nobis.</p>
+              <p>Repudiandae aperiam, porro? Placeat fuga quos quaerat ex quia nam sint eos ad ab, eligendi in nihil aliquam sit itaque illum assumenda! Magnam cum, cupiditate consequuntur aperiam nemo recusandae corporis.</p>
+              <p>Quasi sint, reiciendis nihil molestiae eaque dolores facilis ipsa vel rerum! Id, expedita mollitia obcaecati aliquid, quisquam vel deserunt cum eveniet similique, reprehenderit perspiciatis voluptates asperiores sed reiciendis harum quasi.</p>
+          </div><!-- End .col-md-6 -->
+
+          <div class="col-md-6">
+              <div class="about-slider">
+                <%= image_tag 'oldmen.jpg', style:"width:100%" %>
+              </div><!-- End. about-slider -->
+          </div><!-- End .col-md-6 -->
+      </div><!-- End .row -->
+  </div><!-- End .container -->
+</div><!-- End .bg-white -->
+
+
+<!-- IMAGE GALLERY START -->
+<div class="main">
+  <div class="page-header larger parallax custom" style="background-image:url(assets/images/page-header-bg.jpg)">
+    <div class="container">
+      <h1 class="text-center" style="font-size: 3em">Images</h1>
+    </div><!-- End .container -->
+  </div><!-- End .page-header -->
+
+  <div class="container-fluid pt30">
+    <div class="blog-row">
+      <div id="blog-item-container" class="max-col-3">
+
+        <article class="entry entry-grid">
+          <div class="entry-media">
+            <figure>
+                <a href="single.html"><img src="assets/images/blog/post1.jpg" alt="Post image"></a>
+            </figure>
+            <div class="entry-meta">
+                <span><i class="fa fa-calendar"></i>17 Jan, 2016</span>
+                <a href="#"><i class="fa fa-user"></i> Admin</a>
+            </div><!-- End .entry-media -->
+          </div><!-- End .entry-media -->
+          <h2 class="entry-title"><i class="fa fa-file-image-o"></i><a href="single.html">Lorem ipsum dolor sit ametli elits.</a></h2>
+          <div class="entry-content">
+            <p>Molestiae neque doloremque, voluptatum nostrum praesentium esse fugiat sus siel. Deserunt praesentium archite.</p>
+            <a href="#" class="readmore">Read more<i class="fa fa-angle-right"></i></a>
+          </div><!-- End .entry-content -->
+        </article>
+
+      </div><!-- End #blog-item-container -->
+    </div><!-- End .row -->
+  </div><!-- End .container -->
+</div><!-- End .main -->
+<!-- IMAGE GALLERY END -->
+
+<!-- VIDEO GALLERY START -->
+<div class="main">
+  <div class="page-header larger parallax custom" style="background-image:url(assets/images/page-header-bg.jpg)">
+    <div class="container">
+      <h2 class="text-center" style="font-size: 3em">Videos</h2>
+    </div><!-- End .container -->
+  </div><!-- End .page-header -->
+
+  <div class="container-fluid pt30">
+    <div class="blog-row">
+    <% @videos.each do |video| %>
+      <div id="blog-item-container" class="max-col-3">
+
+        <article class="entry entry-grid">
+          <div class="entry-media">
+            <figure class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="<%= video.video_source %>" width="500" height="281" allowfullscreen></iframe>
+            </figure><!-- End .embed-responsive -->
+            <div class="entry-meta">
+              <span><i class="fa fa-calendar"></i>17 Jan, 2016</span>
+              <a href="#"><i class="fa fa-user"></i> Admin</a>
+            </div><!-- End .entry-media -->
+          </div><!-- End .entry-media -->
+          <h2 class="entry-title"><i class="fa fa-file-movie-o"></i><a href="single.html">Lorem ipsum dolor sit ametli elits.</a></h2>
+          <div class="entry-content">
+            <p>
+              <%= video.video_caption %>
+            </p>
+            <a href="#" class="readmore">Read more<i class="fa fa-angle-right"></i></a>
+          </div><!-- End .entry-content -->
+        </article>
+
+      </div><!-- End #blog-item-container -->
+    <% end %>  
+    </div><!-- End .row -->
+  </div><!-- End .container -->
+</div><!-- End .main -->
+<!-- VIDEO GALLERY END -->
+<!-- End -->

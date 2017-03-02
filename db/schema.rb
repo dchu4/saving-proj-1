@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170228204200) do
+ActiveRecord::Schema.define(version: 20170302165655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,12 +42,12 @@ ActiveRecord::Schema.define(version: 20170228204200) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.string   "post_type"
-    t.string   "post_source"
-    t.text     "post_caption"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table "images", force: :cascade do |t|
+    t.string   "image_source"
+    t.text     "image_caption"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "image_title"
   end
 
   create_table "tours", force: :cascade do |t|
@@ -57,6 +57,14 @@ ActiveRecord::Schema.define(version: 20170228204200) do
     t.time     "tour_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
+    t.string   "video_source"
+    t.text     "video_caption"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "video_title"
   end
 
 end
