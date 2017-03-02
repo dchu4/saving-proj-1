@@ -1,5 +1,11 @@
 class PagesController < ApplicationController
+  def about
+    @videos = Video.all
+    @images = Image.all
+  end
+
   def home
+    @tour = Tour.new
   end
 
   def circle_of_care
@@ -16,5 +22,4 @@ class PagesController < ApplicationController
 
   def contact
   end
-
 end
