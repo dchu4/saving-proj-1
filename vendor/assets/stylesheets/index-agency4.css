@@ -1,16 +1,16 @@
 /* Homepages - Index Agency 4 */
 body,
 #wrapper {
-  background-color: #f9f9fe;
+  background-color: #ffffff;
 }
 
 body {
-  color: #766957;
+  color: #424242;
   font-family: "Raleway", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #3b3227;
+  color: #424242;
 }
 
 h1, .h1 {

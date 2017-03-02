@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
 
+body{
+  color: #424242;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif !important;
 }
@@ -55,7 +59,10 @@ footer {
   padding-left: 15px;
 }
 
-#wrapper>button {
-  margin: 0 !important;
-  padding: 0 !important;
+.invisible {
+  display: none;
+}
+
+.purplebg {
+  background-color: #B9ABD3;
 }

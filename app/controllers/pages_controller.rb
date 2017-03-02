@@ -14,18 +14,30 @@ class PagesController < ApplicationController
 
   def home
     @tour = Tour.new
+    @welcome = Component.find_by_name('welcome')
+    @we_offer = Component.find_by_name('we_offer')
+    @we_invite = Component.find_by_name('we_invite')
+    @services = Component.find_by_name('services')
+    @amenities_activities = Component.find_by_name('amenities_activities')
+    @social_services = Component.find_by_name('social_services')
+    @rooms = Component.find_by_name('rooms')
+    @care_paramount = Component.find_by_name('care_paramount')
   end
 
   def circle_of_care
+    @circle_of_care = Component.find_by_name('circle_of_care')
   end
 
   def wound_care
+    @wound_care = Component.find_by_name('wound_care')
   end
 
   def dementia_care
+    @dementia_care = Component.find_by_name('dementia_care')
   end
 
   def therapy
+    @therapy = Component.find_by_name('therapy')
   end
 
   def contact
