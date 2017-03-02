@@ -4,8 +4,10 @@
   </div>
 </div>
 
-<div class="section-wrapper">
+<div class="container section-wrapper mb30">
   <div class="row">
+    <h3 class="text-center mb30">Apply Today</h3>
+
     <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
       <% if @career.errors.any? %>
         <% @career.errors.full_messages.each do |error|  %>
@@ -90,11 +92,10 @@
         </div>
 
         <div class="form-group">
+          <%= f.invisible_captcha :subtitle %>
           <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-
-<div class="mb50"></div>
