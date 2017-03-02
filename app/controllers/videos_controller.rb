@@ -11,7 +11,7 @@ class VideosController < ApplicationController
     @video = Video.new(video_params)
 
     if @video.save
-      render :new
+      redirect_to '/pages/admin_dashboard'
     else
       render :new
     end
@@ -46,7 +46,8 @@ class VideosController < ApplicationController
   def video_params
     params.require(:video).permit(
       :video_source,
-      :video_caption
+      :video_caption,
+      :video_title
       )
   end
 end

@@ -9130,7 +9130,7 @@ label.error {
   }
 }
 
-.entry:hover .entry-media figure {
+/*.entry:hover .entry-media figure {
   -ms-transform: translateY(-42px);
   transform: translateY(-42px);
 }
@@ -9138,7 +9138,7 @@ label.error {
 .entry:hover.entry-grid .entry-media figure {
   -ms-transform: translateY(-32px);
   transform: translateY(-32px);
-}
+}*/
 
 .entry.entry-grid {
   margin-bottom: 30px;

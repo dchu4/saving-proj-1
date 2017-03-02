@@ -4,6 +4,14 @@ class PagesController < ApplicationController
     @images = Image.all
   end
 
+  def admin_dashboard
+    @images = Image.all
+    @videos = Video.all
+
+    @image = Image.new
+    @video = Video.new
+  end
+
   def home
     @tour = Tour.new
   end

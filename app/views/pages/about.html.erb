@@ -35,28 +35,24 @@
 
     <div class="container-fluid pt30">
       <div class="blog-row">
-      <% @images.each do |image| %>
         <div id="blog-item-container" class="max-col-3">
+      <% @images.each do |image| %>
 
           <article class="entry entry-grid">
             <div class="entry-media">
               <figure>
-                  <a href="single.html"><img src="<%= image.image_source %>" alt="Post image"></a>
+                  <a href="<%= image.image_source %>"><img src="<%= image.image_source %>" alt="Post image"></a>
               </figure>
-              <div class="entry-meta">
-                  <span><i class="fa fa-calendar"></i>17 Jan, 2016</span>
-                  <a href="#"><i class="fa fa-user"></i> Admin</a>
-              </div><!-- End .entry-media -->
+              
             </div><!-- End .entry-media -->
             <h2 class="entry-title"><%= image.image_title %></h2>
             <div class="entry-content">
               <p><%= image.image_caption %></p>
-              <a href="#" class="readmore">Read more<i class="fa fa-angle-right"></i></a>
             </div><!-- End .entry-content -->
           </article>
 
-        </div><!-- End #blog-item-container -->
       <% end %>
+        </div><!-- End #blog-item-container -->
       </div><!-- End .row -->
     </div><!-- End .container -->
   </div><!-- End .main -->
@@ -74,30 +70,27 @@
 
     <div class="container-fluid pt30">
       <div class="blog-row">
-        <% @videos.each do |video| %>
           <div id="blog-item-container" class="max-col-3">
+        <% @videos.each do |video| %>
 
             <article class="entry entry-grid">
               <div class="entry-media">
                 <figure class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="<%= video.video_source %>" width="500" height="281" allowfullscreen></iframe>
+                  <iframe class="embed-responsive-item" src="https://youtu.be/EFEmTsfFL5A" width="500" height="281" allowfullscreen></iframe>
+                  
                 </figure><!-- End .embed-responsive -->
-                <div class="entry-meta">
-                  <span><i class="fa fa-calendar"></i>17 Jan, 2016</span>
-                  <a href="#"><i class="fa fa-user"></i> Admin</a>
-                </div><!-- End .entry-media -->
+
               </div><!-- End .entry-media -->
               <h2 class="entry-title"><%= video.video_title %></h2>
               <div class="entry-content">
                 <p>
                   <%= video.video_caption %>
                 </p>
-                <a href="#" class="readmore">Read more<i class="fa fa-angle-right"></i></a>
               </div><!-- End .entry-content -->
             </article>
 
-          </div><!-- End #blog-item-container -->
         <% end %>  
+          </div><!-- End #blog-item-container -->
       </div><!-- End .row -->
     </div><!-- End .container -->
   </div><!-- End .main -->
