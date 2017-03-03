@@ -20,17 +20,22 @@ p, label, li, input, a {
   display: block;
 }
 
-.checklist li:before{
+.checklist li:before {
   content: "\e013";
   font-family: "Glyphicons Halflings";
 }
 
-.flatpickr-input{
+.flatpickr-input {
   background: white !important;
 }
 
-.section-heading{
-  padding-bottom: 10px;
+.section-heading {
+  padding: 30px 5px 10px 5px;
+}
+
+.section-heading h2 {
+  font-size: 3em;
+  color: white;
 }
 
 select {
