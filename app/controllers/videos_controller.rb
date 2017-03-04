@@ -8,6 +8,11 @@ class VideosController < ApplicationController
   end
 
   def create
+    vp = video_params
+    video_source = vp[:video_source]
+    vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
+    video_params = vp
+
     @video = Video.new(video_params)
 
     if @video.save
