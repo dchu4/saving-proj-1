@@ -5,8 +5,10 @@ class PagesController < ApplicationController
   end
 
   def admin_dashboard
-    @images = Image.all
-    @videos = Video.all
+    @images = Image.all.order("id ASC")
+    gon.images = @images
+    @videos = Video.all.order("id ASC")
+    gon.videos = @videos
 
     @image = Image.new
     @video = Video.new
