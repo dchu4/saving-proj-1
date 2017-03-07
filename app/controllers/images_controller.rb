@@ -22,16 +22,25 @@ class ImagesController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @image = Image.find(params[:id])
   end
 
   def update
+    @image = Image.find(params[:id])
+
+    if @image.update(image_params)
+      redirect_to '/pages/admin_dashboard'
+    else
+      render :new
+    end
   end
 
   def destroy
-    post = Post.find(params[:id])
+    image = Image.find(params[:id])
 
-    post.destroy
+    image.destroy
+
+    redirect_to '/pages/admin_dashboard'
   end
 
   def image_params

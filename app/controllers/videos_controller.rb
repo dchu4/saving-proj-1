@@ -8,6 +8,11 @@ class VideosController < ApplicationController
   end
 
   def create
+    vp = video_params
+    video_source = vp[:video_source]
+    vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
+    video_params = vp
+
     @video = Video.new(video_params)
 
     if @video.save
@@ -28,6 +33,11 @@ class VideosController < ApplicationController
   def update
     @video = Video.find(params[:id])
 
+    vp = video_params
+    video_source = vp[:video_source]
+    vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
+    video_params = vp
+
     if @video.update(video_params)
       render :show
     else
@@ -40,7 +50,7 @@ class VideosController < ApplicationController
 
     video.destroy
 
-    render :index #change to flash message
+    redirect_to '/pages/admin_dashboard'
   end
 
   def video_params

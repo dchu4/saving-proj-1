@@ -7,14 +7,15 @@
 <div class="container-fluid pt10">
   <div class="row">
 
-    <div class="col-md-6"><!-- IMAGES START -->
-      <h2 class="text-center section-heading bg-custom text-white">Images</h2>
+    <!-- ========================== IMAGE START ============================= -->
+    <div class="col-md-6 col-sm-12 col-lg-6">
+      <h2 class="text-center section-heading bg-custom text-white" style="padding-top: 5px;margin-bottom: 5px">Images</h2>
 
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add Image</button>
+      <button type="button" class="btn btn-info btn-lg" style="width:100%;margin-bottom: 5px" data-toggle="modal" data-target="#addImageModal">Add Image</button>
 
       <!-- Modal -->
-      <div id="myModal" class="modal fade" role="dialog">
+      <div id="addImageModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
           <!-- Modal content-->
@@ -46,31 +47,147 @@
                       <%= f.text_area :image_caption, class: 'form-control' %>
                     </div>
                     
-                    <div class="form-group">
-                      <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+                    <div class="modal-footer">
+                      <div class="form-group text-center">
+                        <%= f.submit 'Create', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                        <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme" data-dismiss="modal">Close</button>
+                      </div>
                     </div>
                   <% end %>
                 </div>
               </div>
             </div> <!-- END SECTION WRAPPER -->
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
           </div>
 
         </div>
       </div>
-    </div><!-- IMAGES END -->
 
-    <div class="col-md-6"><!-- VIDEOS START -->
-      <h2 class="text-center section-heading bg-custom text-white">Videos</h2>
+      <table class="table table-condensed table-responsive">
+        <% @images.each_with_index do |image, index| %>
+          <tbody>
+            <tr>
+              <td class="text">
+                <h4><%= image.image_title %></h4>
+              </td>  
+                  
+              <td class="text-right">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#editImageModal<%= index %>"><span class="glyphicon glyphicon-edit"></span> Edit</button>
 
+                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#deleteImageModal<%= index %>"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- ========================== EDIT IMAGE MODAL ============================ -->
+          <div id="editImageModal<%= index %>" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Edit Image</h4>
+                </div>
+                
+                <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+
+                    <%= form_for image  do |f| %>
+                      <div class="form-group row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                          <%= f.label :image_title, 'Image Title:' %>
+                          <%= f.text_field :image_title, class: 'form-control' %>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <%= f.label :image_source, 'Image Source:' %>
+                        <%= f.file_field :image_source, class: 'form-control' %>
+                      </div>
+
+                      <div class="form-group">
+                        <%= f.label :image_caption, 'Caption:' %>
+                        <%= f.text_area :image_caption, class: 'form-control' %>
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <div class="form-group text-center">
+                          <%= f.submit 'Save', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                          <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme"" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    <% end %>
+                      
+                    </div>
+                  </div>
+                </div> <!-- END SECTION WRAPPER -->
+              </div>
+
+            </div>
+          </div>
+          <!-- =============================== END EDIT IMAGE MODAL =============================== -->
+
+          <!-- ================================== DELETE IMAGE MODAL ==================================== -->
+
+          <!-- Modal -->
+          <div id="deleteImageModal<%= index %>" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Delete Image</h4>
+                </div>
+                
+                <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+
+                    <%= form_for image, method: :delete do |f| %>
+
+                      <h3 class="text-center">Are you sure you want to delete?</h3>
+                      
+                      <div class="modal-footer">
+                        <div class="form-group text-center">
+                          <%= f.submit 'Delete', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                          <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    <% end %>
+                      
+                    </div>
+                  </div>
+                </div> <!-- END SECTION WRAPPER -->
+
+              </div>
+
+            </div>
+          </div>
+          <!-- ============================== END DELETE IMAGE MODAL ============================== -->
+
+
+        <% end %>
+      </table>
+    </div>
+    <!-- ========================== IMAGE END ============================ -->
+    
+    <!-- ======================= VIDEO START ======================= -->
+    <div class="col-md-6 col-sm-12 col-lg-6">
+      <h2 class="text-center section-heading bg-custom text-white" style="padding-top: 5px;margin-bottom: 5px">Videos</h2>
+
+      <!-- =================== ADD VIDEO =================== -->
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Add Video</button>
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <button type="button" class="btn btn-info btn-lg" style="width:100%;margin-bottom: 5px" data-toggle="modal" data-target="#addVideoModal">Add Video</button>
+        </div>
+      </div>
 
       <!-- Modal -->
-      <div id="myModal2" class="modal fade" role="dialog">
+      <div id="addVideoModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
           <!-- Modal content-->
@@ -102,32 +219,131 @@
                       <%= f.text_area :video_caption, class: 'form-control' %>
                     </div>
                     
-                    <div class="form-group">
-                      <%= f.submit 'Submit', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+                    <div class="modal-footer">
+                      <div class="form-group text-center">
+                        <%= f.submit 'Create', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                        <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme" data-dismiss="modal">Close</button>
+                      </div>
                     </div>
                   <% end %>
                 </div>
               </div>
             </div> <!-- END SECTION WRAPPER -->
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
           </div>
 
         </div>
       </div>
+      <!-- =================== END ADD VIDEO ================== -->
+
+      <table class="table table-condensed table-responsive">
+        <% @videos.each_with_index do |video, index| %>
+          <tbody>
+            <tr>
+              <td class="text">
+                <h4><%= video.video_title %></h4>
+              </td>  
+                  
+              <td class="text-right">
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#editVideoModal<%= index %>"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+                <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#deleteVideoModal<%= index %>"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+              </td>
+            </tr>
+          </tbody>
+
+          <!-- ================================ EDIT VIDEO MODAL ================================= -->
+          <div id="editVideoModal<%= index %>" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Edit Video</h4>
+                </div>
+                
+                <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+
+                    <%= form_for video  do |f| %>
+                      <div class="form-group row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                          <%= f.label :video_title, 'Video Title:' %>
+                          <%= f.text_field :video_title, class: 'form-control' %>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <%= f.label :video_source, 'Video Source:' %>
+                        <%= f.text_field :video_source, class: 'form-control' %>
+                      </div>
+
+                      <div class="form-group">
+                        <%= f.label :video_caption, 'Caption:' %>
+                        <%= f.text_area :video_caption, class: 'form-control' %>
+                      </div>
+                      
+                      <div class="modal-footer">
+                        <div class="form-group text-center">
+                          <%= f.submit 'Save', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                          <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    <% end %>
+                      
+                    </div>
+                  </div>
+                </div> <!-- END SECTION WRAPPER -->
+              </div>
+
+            </div>
+          </div>
+          <!-- ========================== END EDIT VIDEO MODAL ============================== -->
+
+          <!-- ================================== Delete Modal ==================================== -->
+          <div id="deleteVideoModal<%= index %>" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Delete Video</h4>
+                </div>
+                
+                <div class="section-wrapper"> <!-- START SECTION WRAPPER -->
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+
+                    <%= form_for video, method: :delete do |f| %>
+
+                      <h3 class="text-center">Are you sure you want to delete?</h3>
+                      
+                      <div class="modal-footer">
+                        <div class="form-group text-center">
+                          <%= f.submit 'Delete', class: "btn btn-md btn-custom2 min-width tp-resizeme" %>
+                          <button type="button" class="btn btn-md btn-custom2 min-width tp-resizeme" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    <% end %>
+                      
+                    </div>
+                  </div>
+                </div> <!-- END SECTION WRAPPER -->
+
+              </div>
+
+            </div>
+          </div>
+          <!-- ============================== END DELETE MODAL ============================== -->
 
 
-
-
-
-
-
-
-
-
-
-    </div><!-- VIDEOS END -->
+        <% end %>
+      </table>
+    </div>
+    <!-- ============================= VIDEO END ========================= -->
   </div>
 </div>
+
+<!-- ================================== MODAL TEST ==================================== -->
