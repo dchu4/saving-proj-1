@@ -235,7 +235,8 @@
             <%= f.text_field :tour_time, class: "form-control flatpickr_time", placeholder: "Select Time.." %>
           </div><!-- End .col-md-2 -->
           <div class="col-lg-2 col-md-2 col-sm-12" style="margin-top: 27px">
-            <%= f.submit 'Book', class: "btn btn-block tour-button" %>
+            <%= f.invisible_captcha :subtitle %>
+            <%= f.submit 'Book', class: "btn btn-custom2 btn-block" %>
           </div><!-- End .col-md-2 -->
         <% end %>
       </div><!-- End .row -->
