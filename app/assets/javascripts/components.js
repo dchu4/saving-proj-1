@@ -17,7 +17,7 @@ var options = {
 $('.summernote').summernote(options);
 
 var edit = function(componentDisplay, componentBody, componentEdit, componentSave, componentCancel) {
-  $(componentBody).summernote({focus: true});
+  $(componentBody).summernote(options);
   $(componentBody).removeClass('invisible');
   $(componentDisplay).addClass('invisible');
   $(componentEdit).addClass('invisible');

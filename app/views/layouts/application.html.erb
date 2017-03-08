@@ -7,7 +7,6 @@
     <%= Gon::Base.render_data({}) %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-    <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
@@ -52,6 +51,7 @@
                     <li><a href="/pages/circle_of_care">Circle of Care</a></li>
                     <li><a href="/pages/wound_care">Wound Care</a></li>
                     <li><a href="/pages/dementia_care">Dementia Care</a></li>
+                    <li><a href="/pages/short_term_therapy">Short Term Therapy</a></li>
                   </ul>
                 </li>
                 <li><a href="/pages/therapy" role="button" aria-expanded="false"><span>Therapy</span></a></li>
@@ -74,7 +74,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-5">
             <div class="widget about-widget">
               <%= image_tag 'logo.png', alt: 'Logo', width: '200px' %>
               <hr>
@@ -84,28 +84,29 @@
               <label>Write Us:</label> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a>
             </div><!-- End .widget -->
           </div><!-- End .col-md-5 -->
-          <div class="col-md-5 col-md-offset-3">
+          <div class="col-md-5 col-md-offset-2">
             <div class="row">
 
               <div class="widget links-widget">
                 <h4 class="widget-title">Paramount of Oak Park</h4>
                 <div class="row">
 
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <ul class="fa-ul">
-                      <li><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Care</li>
-                      <li><a href="/pages/circle_of_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Circle of Care</a></li>
-                      <li><a href="/pages/wound_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Wound Care</a></li>
-                      <li><a href="/pages/dementia_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Dementia Care</a></li>
+                      <li><i class="fa-li fa fa-chain" aria-hidden="true"></i>Care</li>
+                      <li><a href="/pages/circle_of_care">Circle of Care</a></li>
+                      <li><a href="/pages/wound_care">Wound Care</a></li>
+                      <li><a href="/pages/dementia_care">Dementia Care</a></li>
+                      <li><a href="/pages/short_term_therapy">Short Term Therapy</a></li>
                     </ul>
                   </div>
 
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <ul class="fa-ul">
-                      <li><a href="/pages/therapy"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Therapy</a></li>
-                      <li><a href="/pages/careers/"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Careers</a></li>
-                      <li><a href="/pages/about"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>About</a></li>
-                      <li><a href="/pages/contact"><i class="fa-li fa fa-circle-o" aria-hidden="true"></i>Contact</a></li>
+                      <li><a href="/pages/therapy"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Therapy</a></li>
+                      <li><a href="/pages/careers/"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Careers</a></li>
+                      <li><a href="/pages/about"><i class="fa-li fa fa-chain" aria-hidden="true"></i>About</a></li>
+                      <li><a href="/pages/contact"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Contact</a></li>
                     </ul>
                   </div>
 
