@@ -1,4 +1,6 @@
 class ToursController < ApplicationController
+  invisible_captcha only: [:create], honeypot: :subtitle
+
   def index
     @tours = Tour.all
   end
@@ -12,9 +14,11 @@ class ToursController < ApplicationController
 
     if @tour.save
       ParamountMailer.tour_email(@tour).deliver_now
-      redirect_to '/tours/thank_you'
+      flash[:notice] = "Thank you for booking a tour! We will respond promptly."
+      redirect_to '/tours/new'
     else
-      render :new
+      flash[:alert] = "Please include a name, valid email address, date, and time."
+      redirect_to '/tours/new'
     end
   end
 

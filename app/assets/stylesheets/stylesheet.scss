@@ -12,6 +12,19 @@ p, label, li, input, a {
   font-family: 'Raleway', sans-serif !important;
 }
 
+.admin-button {
+  background: #54B94A;
+}
+
+.admin-button:hover {
+  background: #512E91;
+}
+
+.admin-button-lg {
+  width:100%;
+  margin-bottom: 5px;
+}
+
 .checklist ul {
   padding: 20px;
 }

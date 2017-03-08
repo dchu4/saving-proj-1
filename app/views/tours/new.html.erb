@@ -1,4 +1,4 @@
-<div class="jumbotron bg-custom text-white">
+<div class="bg-custom text-white section-heading">
   <div class="container-fluid">
     <h2 class="text-center">Book A Tour</h2>
   </div>
@@ -7,11 +7,31 @@
 <div class="section-wrapper">
   <div class="row">
     <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-      <% if @tour.errors.any? %>
+      <!-- <% if @tour.errors.any? %>
         <% @tour.errors.full_messages.each do |error|  %>
           <p class="text-center" style="color: red"><%= error %></p>
         <% end %>
         <br><br>
+      <% end %> -->
+      <% if notice %>
+        <div class="container">
+          <div class="row">
+            <div class="alert alert-dismissible alert-success">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h4 class="notice"><%= notice %></h4>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="container">
+          <div class="row">
+            <div class="alert alert-dismissible alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h4 class="notice"><%= alert %></h4>
+            </div>
+          </div>
+        </div>
       <% end %>
       
       <%= form_for @tour do |f| %>
@@ -46,8 +66,9 @@
         </div>
         <!-- END DATETIME -->
 
-        <div class="form-group">
-          <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+        <div class="form-group text-center">
+          <%= f.invisible_captcha :subtitle %>
+          <%= f.submit 'Book', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
         </div>
       <% end %>
     </div>
