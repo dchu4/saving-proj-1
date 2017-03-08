@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/pages/therapy' => 'pages#therapy'
   get '/pages/about' => 'pages#about'
   get '/pages/admin_dashboard' => 'pages#admin_dashboard'
+  get '/pages/referral' => 'pages#referral'
 
   get '/pages/careers' => 'careers#new'
   get '/careers/thank_you' => 'careers#thank_you'

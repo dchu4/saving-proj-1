@@ -25,7 +25,7 @@
     </td>
 
     <td>
-      <%= @tour.tour_time %>
+      <%= @tour.tour_time.to_s.strftime("%I:%M%p") %>
     </td>
   </tr>
 </table>
