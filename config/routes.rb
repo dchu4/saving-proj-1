@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/pages/circle_of_care' => 'pages#circle_of_care'
   get '/pages/wound_care' => 'pages#wound_care'
   get '/pages/dementia_care' => 'pages#dementia_care'
+  get '/pages/short_term_therapy' => 'pages#short_term_therapy'
   get '/pages/therapy' => 'pages#therapy'
   get '/pages/about' => 'pages#about'
   get '/pages/admin_dashboard' => 'pages#admin_dashboard'

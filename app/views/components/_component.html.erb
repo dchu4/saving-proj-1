@@ -5,10 +5,10 @@
   <%= f.text_area :body, id: "#{name}Body", class: 'invisible' %>
   
   <div class="text-center">
-    <button id="<%= name %>Edit" class="btn btn-primary" onclick="edit(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Edit</button>
+    <button id="<%= name %>Edit" class="button btn-primary" onclick="edit(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Edit</button>
 
-    <%= f.submit 'Save', class: "btn btn-success invisible", id: "#{name}Save" %>
+    <%= f.submit 'Save', class: "button btn-success invisible", id: "#{name}Save" %>
     
-    <button id="<%= name %>Cancel" class="btn btn-danger invisible" onclick="cancel(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Cancel</button>
+    <button id="<%= name %>Cancel" class="button btn-danger invisible" onclick="cancel(<%= name %>Display, <%= name %>Body, <%= name %>Edit, <%= name %>Save, <%= name %>Cancel)" type="button">Cancel</button>
   </div>
 <% end %>
