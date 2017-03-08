@@ -53,5 +53,7 @@ class PagesController < ApplicationController
   end
 
   def referral
+    @hiring_bonus = Component.find_by_name('hiring_bonus')
+    @referral_bonus = Component.find_by_name('referral_bonus')
   end
 end
