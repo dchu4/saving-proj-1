@@ -1,0 +1,9 @@
+<div class="bg-custom text-white section-heading">
+  <div class="container-fluid">
+    <h2 class="text-center"><%= @short_term_therapy.title %></h2>
+  </div>
+</div>
+
+<div class="section-wrapper mb20 pt30">
+  <%= render partial: 'components/component', locals: { component: @short_term_therapy, name: 'short_term_therapy' } %>
+</div>

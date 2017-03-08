@@ -15,8 +15,10 @@ class CareersController < ApplicationController
     
     if @career.save
       ParamountMailer.job_application_email(@career).deliver_now
+      flash[:notice] = "Thank you for applying! We will get back to you shortly."
       redirect_to '/careers/thank_you'
     else
+      flash[:alert] = @career.errors.full_messages.join(", ")
       render :new
     end
   end

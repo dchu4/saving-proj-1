@@ -36,6 +36,10 @@ class PagesController < ApplicationController
     @dementia_care = Component.find_by_name('dementia_care')
   end
 
+  def short_term_therapy
+    @short_term_therapy = Component.find_by_name('short_term_therapy')
+  end
+
   def therapy
     @therapy = Component.find_by_name('therapy')
   end

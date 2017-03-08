@@ -1,15 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Raleway');
+/*@import 'bootstrap';*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
-body{
-  color: #424242;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif !important;
-}
-
-p, label, li, input, a {
-  font-family: 'Raleway', sans-serif !important;
+body, p, label, li, input, a {
+  font-size: 1.7rem !important;
 }
 
 .checklist ul {
@@ -69,5 +62,19 @@ footer {
 }
 
 .purplebg {
+  background-color: #B9ABD3;
+}
+
+.button {
+  padding: 7px 12px;
+  margin: 2px;
+  border: none;
+}
+
+.tour-button {
+  background-color: #54B94A;
+}
+
+.tour-button:hover {
   background-color: #B9ABD3;
 }

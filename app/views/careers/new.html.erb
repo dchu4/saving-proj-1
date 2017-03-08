@@ -4,17 +4,30 @@
   </div>
 </div>
 
+<% if notice %>
+  <div class="container mb20 pt20">
+    <div class="row">
+      <div class="alert alert-dismissible alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
+        <strong><%= notice %></strong>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="container mb20 pt20">
+    <div class="row">
+      <div class="alert alert-dismissible alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" class="text-white">&times;</span></button>
+        <strong><%= alert %></strong>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="container section-wrapper mb30 pt40">
   <div class="row">
     <h3 class="text-center mb30">Apply Today</h3>
-
-    <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
-      <% if @career.errors.any? %>
-        <% @career.errors.full_messages.each do |error|  %>
-          <p class="text-center" style="color: red"><%= error %></p>
-        <% end %>
-        <br><br>
-      <% end %>
       
       <%= form_for @career do |f| %>
         <div class="form-group row">
