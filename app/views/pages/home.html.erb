@@ -181,6 +181,27 @@
   </div><!-- End #rev_slider -->
 </div><!-- END REVOLUTION SLIDER -->
 
+<% if notice %>
+  <div class="container mb20 pt20">
+    <div class="row">
+      <div class="alert alert-dismissible alert-success" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong><%= notice %></strong>
+      </div>
+    </div>
+  </div>
+<% end %>
+<% if alert %>
+  <div class="container mb20 pt20">
+    <div class="row">
+      <div class="alert alert-dismissible alert-danger" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong><%= alert %></strong>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 <div class="pt50 pb25 pt25-xs mb20 text-center bg-white">
   <div class="section-wrapper">
     <h2 class="title text-center mb30"><%= @welcome.title %></h2>
