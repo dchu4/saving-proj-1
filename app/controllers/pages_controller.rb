@@ -44,4 +44,7 @@ class PagesController < ApplicationController
 
   def contact
   end
+
+  def referral
+  end
 end

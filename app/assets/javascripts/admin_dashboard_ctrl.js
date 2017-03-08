@@ -1,12 +1,14 @@
 var EditImage = {
-  template: '#bs-modal',
-  props: ['image']
+  template: '#testModal',
+  props: ['image'],
+
 };
 
 new Vue({
   el: '#el',
   data: {
     images: gon.images,
+    image: "rnrjkegnregnreklgerklg"
   },
   components: {
     'modal': EditImage
