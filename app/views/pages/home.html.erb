@@ -86,7 +86,7 @@
           data-style_hover="bg:#c00f3c;c:#fff;bc:#c00f3c;s:300;e:Linear.easeNone;"
           data-responsive_offset="on" 
           style="z-index: 7;"
-          href="#">Schedule a Tour
+          href="/tours/new">Schedule a Tour
         </a>
       </li>
 
@@ -182,9 +182,9 @@
 </div><!-- END REVOLUTION SLIDER -->
 
 <% if notice %>
-  <div class="container mb20 pt20">
+  <div class="container pt20">
     <div class="row">
-      <div class="alert alert-dismissible alert-success" role="alert">
+      <div class="alert alert-dismissible alert-success text-center" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <strong><%= notice %></strong>
       </div>
@@ -192,9 +192,9 @@
   </div>
 <% end %>
 <% if alert %>
-  <div class="container mb20 pt20">
+  <div class="container pt20">
     <div class="row">
-      <div class="alert alert-dismissible alert-danger" role="alert">
+      <div class="alert alert-dismissible alert-danger text-center" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <strong><%= alert %></strong>
       </div>
@@ -260,7 +260,7 @@
           </div><!-- End .col-md-2 -->
           <div class="col-lg-2 col-md-2 col-sm-12" style="margin-top: 27px">
             <%= f.invisible_captcha :subtitle %>
-            <%= f.submit 'Book', class: "btn btn-custom2 btn-block" %>
+            <%= f.submit 'Book', class: "btn btn-block tour-button" %>
           </div><!-- End .col-md-2 -->
         <% end %>
       </div><!-- End .row -->

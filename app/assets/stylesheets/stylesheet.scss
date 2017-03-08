@@ -1,16 +1,20 @@
 /*@import 'bootstrap';*/
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+$green: #54B94A;
+$purple: #512E91;
+$light-purple: #B9ABD3;
+
 body, p, label, li, input, a {
   font-size: 1.7rem !important;
 }
 
 .admin-button {
-  background: #54B94A;
+  background: $green;
 }
 
 .admin-button:hover {
-  background: #512E91;
+  background: $purple;
 }
 
 .admin-button-lg {
@@ -85,7 +89,7 @@ footer {
 }
 
 .purplebg {
-  background-color: #B9ABD3;
+  background-color: $light-purple;
 }
 
 .button {
@@ -95,9 +99,13 @@ footer {
 }
 
 .tour-button {
-  background-color: #54B94A;
+  background-color: $green;
 }
 
 .tour-button:hover {
-  background-color: #B9ABD3;
+  background-color: $light-purple;
+}
+
+.min-height {
+  height: 40vh;
 }

@@ -1,6 +1,6 @@
 <div id="<%= name %>Display"><%= sanitize component.body %></div>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && current_user.admin %>
 
   <%= form_for component do |f| %>
 
