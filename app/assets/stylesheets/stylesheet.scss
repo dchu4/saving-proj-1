@@ -35,6 +35,16 @@ body, p, label, li, input, a {
   background: white !important;
 }
 
+.full-circle {
+  background-color: #512E91;
+  text-align: center;
+  height: 150px;
+  -moz-border-radius:75px;
+  -webkit-border-radius: 75px;
+  width: 150px;
+  margin: auto;
+}
+
 .section-heading {
   padding: 30px 5px 10px 5px;
 }

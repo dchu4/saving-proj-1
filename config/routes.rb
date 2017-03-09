@@ -18,13 +18,13 @@ Rails.application.routes.draw do
   resources :careers, only: [:index, :new, :create, :show, :destroy]
 
   get '/tours/thank_you' => 'tours#thank_you'
-  resources :tours
+  resources :tours, only: [:index, :create]
 
-  resources :images
+  resources :images, only: [:create, :update, :destroy]
 
-  resources :videos
+  resources :videos, only: [:create, :update, :destroy]
 
-  resources :contacts
+  resources :contacts, only: [:create]
 
   resources :components
 end
