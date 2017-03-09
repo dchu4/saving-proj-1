@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     gon.images = @images
     @videos = Video.all.order("id ASC")
     gon.videos = @videos
+    @tours = Tour.all.order("id ASC")
 
     @image = Image.new
     @video = Video.new

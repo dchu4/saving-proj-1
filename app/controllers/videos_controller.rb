@@ -10,8 +10,10 @@ class VideosController < ApplicationController
   def create
     vp = video_params
     video_source = vp[:video_source]
-    vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
-    video_params = vp
+    if video_source.length > 32
+      vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
+      video_params = vp
+    end
 
     @video = Video.new(video_params)
 
@@ -35,8 +37,10 @@ class VideosController < ApplicationController
 
     vp = video_params
     video_source = vp[:video_source]
-    vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
-    video_params = vp
+    if video_source.length > 32
+      vp[:video_source] = "https://www.youtube.com/embed/#{video_source[32,video_source.length-1]}"
+      video_params = vp
+    end
 
     if @video.update(video_params)
       render :show
