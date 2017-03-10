@@ -43,7 +43,7 @@ class VideosController < ApplicationController
     end
 
     if @video.update(video_params)
-      render :show
+      redirect_to request.referrer
     else
       render :edit
     end
@@ -56,6 +56,8 @@ class VideosController < ApplicationController
 
     redirect_to '/pages/admin_dashboard'
   end
+
+  private
 
   def video_params
     params.require(:video).permit(

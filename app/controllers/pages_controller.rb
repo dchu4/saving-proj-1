@@ -15,6 +15,9 @@ class PagesController < ApplicationController
 
     @image = Image.new
     @video = Video.new
+
+    gon.videoLength = Video.all.count
+    gon.imageLength = Image.all.count
   end
 
   def home
