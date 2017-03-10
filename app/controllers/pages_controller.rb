@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_action :authenticate_admin!, only: [:admin_dashboard]
+
   def about
     @videos = Video.all
     @images = Image.all
@@ -13,6 +15,9 @@ class PagesController < ApplicationController
 
     @image = Image.new
     @video = Video.new
+
+    gon.videoLength = Video.all.count
+    gon.imageLength = Image.all.count
   end
 
   def home
@@ -51,5 +56,7 @@ class PagesController < ApplicationController
   end
 
   def referral
+    @hiring_bonus = Component.find_by_name('hiring_bonus')
+    @referral_bonus = Component.find_by_name('referral_bonus')
   end
 end

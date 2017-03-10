@@ -76,6 +76,12 @@
                 </li>
                 <li><a href="/pages/about" role="button" aria-expanded="false">About</a></li>
                 <li><a href="/pages/contact" role="button" aria-expanded="false">Contact</a></li>
+                <% if !current_user %>
+                  <li><a href="/users/sign_in" role="button" aria-expanded="false">Sign In</a></li>
+                <% end %>
+                <% if current_user %>
+                  <li><%= link_to 'Sign Out', '/users/sign_out', method: :delete %></li>
+                <% end %>
 
               </ul>
             </div><!-- /.navbar-collapse -->
@@ -113,7 +119,7 @@
               <label>Write Us:</label> <a href="mailto:paramountchstours@gmail.com">paramountchstours@gmail.com</a>
             </div><!-- End .widget -->
           </div><!-- End .col-md-5 -->
-          <div class="col-md-5 col-md-offset-2">
+          <div class="col-md-6 col-md-offset-1">
             <div class="row">
 
               <div class="widget links-widget">
@@ -122,18 +128,18 @@
 
                   <div class="col-md-6">
                     <ul class="fa-ul">
-                      <li><i class="fa-li fa fa-chain" aria-hidden="true"></i>Care</li>
-                      <li><a href="/pages/circle_of_care">Circle of Care</a></li>
-                      <li><a href="/pages/wound_care">Wound Care</a></li>
-                      <li><a href="/pages/dementia_care">Dementia Care</a></li>
-                      <li><a href="/pages/short_term_therapy">Short Term Therapy</a></li>
+                      <li><a href="/pages/circle_of_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Circle of Care</a></li>
+                      <li><a href="/pages/wound_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Wound Care</a></li>
+                      <li><a href="/pages/dementia_care"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Dementia Care</a></li>
+                      <li><a href="/pages/short_term_therapy"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Short Term Therapy</a></li>
+                      <li><a href="/pages/therapy"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Therapy</a></li>
                     </ul>
                   </div>
 
                   <div class="col-md-6">
                     <ul class="fa-ul">
-                      <li><a href="/pages/therapy"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Therapy</a></li>
-                      <li><a href="/pages/careers/"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Careers</a></li>
+                      <li><a href="/pages/careers/"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Apply for a Job</a></li>
+                      <li><a href="/pages/referral"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Hiring/Referral Bonuses</a></li>
                       <li><a href="/pages/about"><i class="fa-li fa fa-chain" aria-hidden="true"></i>About</a></li>
                       <li><a href="/pages/contact"><i class="fa-li fa fa-chain" aria-hidden="true"></i>Contact</a></li>
                     </ul>

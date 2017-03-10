@@ -3699,7 +3699,7 @@ label.error {
 }
 
 /* Elements Alerts */
-.alert {
+/*.alert {
   padding: 10px 20px;
   border-radius: 0;
 }
@@ -3790,7 +3790,7 @@ label.error {
 
 .alert.alert-danger .alert-link:hover, .alert.alert-danger .alert-link:focus {
   color: #f3817f;
-}
+}*/
 
 /* Elements Counters */
 .count-title {
