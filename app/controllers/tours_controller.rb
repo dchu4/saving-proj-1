@@ -1,8 +1,9 @@
 class ToursController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
+  before_action :authenticate_admin!, only: [:index]
 
   def index
-    @tours = Tour.all
+    @tours = Tour.all.order("id ASC")
   end
 
   def new
@@ -37,7 +38,7 @@ class ToursController < ApplicationController
 
     tour.destroy
 
-    #redirect to admin panel
+    rneder :index
   end
 
   def thank_you

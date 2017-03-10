@@ -2,9 +2,10 @@ include CareersHelper
 
 class CareersController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
+  before_action :authenticate_admin!, only: [:index, :show]
 
   def index
-    @careers = Career.all
+    @careers = Career.all.order("id ASC")
   end
 
   def new
@@ -25,6 +26,7 @@ class CareersController < ApplicationController
   end
 
   def show
+    @career = Career.find(params[:id])
   end
 
   def destroy

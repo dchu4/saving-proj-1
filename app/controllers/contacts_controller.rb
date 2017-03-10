@@ -1,8 +1,9 @@
 class ContactsController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
+  before_action :authenticate_admin!, only: [:index, :show]
 
   def index
-    @contacts = Contact.all
+    @contacts = Contact.all.order("id ASC")
   end
 
   def new

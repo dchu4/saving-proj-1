@@ -1,26 +1,26 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row pt30">
-    <div class="col-sm-12 col-md-12 col-lg-12">
-      <table class="table table-responsive">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-lg-offset-3">
+      <table class="table table-responsive table-bordered">
         <tr>
-          <b>Name:</b>
-        </tr>
-        <tr style="padding-bottom: 10px">
-          <p><%= @contact.first_name %></p>
+          <td class="table-col-width"><b>Name:</b></td>
+        <!-- </tr>
+        <tr> -->
+          <td><p><%= @contact.first_name %></p></td>
         </tr>
 
         <tr>
-          <b>Email:</b>
-        </tr>
-        <tr style="padding-bottom: 10px">
-          <p><%= @contact.email %></p>
+          <td class="table-col-width"><b>Email:</b></td>
+        <!-- </tr>
+        <tr> -->
+          <td><p><%= @contact.email %></p></td>
         </tr>
 
         <tr>
-          <b>Message:</b>
-        </tr>
-        <tr>
-          <p><%= @contact.message %></p>
+          <td class="table-col-width"><b>Message:</b></td>
+        <!-- </tr>
+        <tr> -->
+          <td><p><%= @contact.message %></p></td>
         </tr>
       </table>
     </div>

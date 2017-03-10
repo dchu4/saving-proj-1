@@ -6,7 +6,7 @@
 
 <div class="container-fluid pt10">
   <div class="row">
-    <div class="col-md-12 col-sm-12 col-lg-12">
+    <div class="col-md-10 col-sm-12 col-lg-10 col-md-offset-1 col-lg-offset-1">
       <table class="table table-condensed table-responsive">
         <tr>
           <td>Name:</td>
@@ -15,7 +15,7 @@
         </tr>
         <% @careers.each do |career| %>
           <tr>
-            <td><%= career.full_name %></td>
+            <td><%= link_to career.full_name, "/careers/#{career.id}" %></td>
             <td><%= career.email %></td>
             <td><%= link_to "Delete", "/careers/#{career.id}", :method => :delete %></td>
           </tr>
