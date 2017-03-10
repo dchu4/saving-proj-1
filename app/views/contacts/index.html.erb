@@ -1,23 +1,23 @@
 <div class="bg-custom text-white section-heading">
   <div class="container-fluid">
-    <h2 class="text-center">Applications</h2>
+    <h2 class="text-center">Contact Messages</h2>
   </div>
 </div>
 
 <div class="container-fluid pt10">
   <div class="row">
     <div class="col-md-10 col-sm-12 col-lg-10 col-md-offset-1 col-lg-offset-1">
-      <table class="table table-condensed table-responsive">
+      <table class="table table-condensed table-responsive table">
         <tr>
           <td>Name:</td>
           <td>Email:</td>
           <td>Delete:</td>
         </tr>
-        <% @careers.each do |career| %>
+        <% @contacts.each do |contact| %>
           <tr>
-            <td><%= link_to career.full_name, "/careers/#{career.id}" %></td>
-            <td><%= career.email %></td>
-            <td><%= link_to "Delete", "/careers/#{career.id}", :method => :delete %></td>
+            <td><%= link_to contact.first_name, "/contacts/#{contact.id}" %></td>
+            <td><%= contact.email %></td>
+            <td><%= link_to 'Delete', "/contacts/#{contact.id}", :method => :delete %></td>
           </tr>
         <% end %>
       </table>

@@ -1,0 +1,48 @@
+<div class="container-fluid">
+  <div class="row pt30">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-lg-offset-3">
+      <table class="table table-responsive table-bordered">
+        <tr>
+          <td>
+            <b>Job Role:</b>
+          </td>
+          <td>
+            <%= @career.job_role %>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Name:</b></td>
+          <td><%= @career.full_name %></td>
+        </tr>
+
+        <tr>
+          <td><b>Phone Number:</b></td>
+          <td><%= @career.phone_number %></td>
+        </tr>
+
+        <tr>
+          <td><b>Email:</b></td>
+          <td><%= @career.email %></td>
+        </tr>
+
+        <tr>
+          <td><b>Street Address:</b></td>
+          <td>
+            <%= @career.street_address %> <%= @career.apt_number %> <br> <%= @career.city %>, <%= @career.state%>, <%= @career.country %>, <%= @career.zip_code %>
+          </td>
+        </tr>
+
+        <tr>
+          <td><b>Resume:</b></td>
+          <td><%= link_to "Resume Link", @career.resume.url %></td>
+        </tr>
+
+        <tr>
+          <td><b>Referral:</b></td>
+          <td><%= @career.referral %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
