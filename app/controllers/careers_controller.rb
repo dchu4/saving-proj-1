@@ -2,7 +2,7 @@ include CareersHelper
 
 class CareersController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
-  before_action :authenticate_admin!, only: [:index, :show]
+  before_action :authenticate_admin!, only: [:index, :show, :delete]
 
   def index
     @careers = Career.all.order("id ASC")
@@ -17,7 +17,6 @@ class CareersController < ApplicationController
     
     if @career.save
       ParamountMailer.job_application_email(@career).deliver_now
-      flash[:notice] = "Thank you for applying! We will get back to you shortly."
       redirect_to '/careers/thank_you'
     else
       flash[:alert] = @career.errors.full_messages.join(", ")

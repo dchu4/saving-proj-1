@@ -1,12 +1,5 @@
 class ImagesController < ApplicationController
-  def index
-    @images = Image.all
-    # gon.images = Image.all
-  end
-
-  def new
-    @image = Image.new
-  end
+  before_action :authenticate_admin!, only: [:create, :update, :delete]
 
   def create
     @image = Image.new(image_params)
@@ -14,15 +7,8 @@ class ImagesController < ApplicationController
     if @image.save
       redirect_to '/pages/admin_dashboard'
     else
-      render :new
+      redirect_to '/pages/admin_dashboard'
     end
-  end
-
-  def show
-  end
-
-  def edit
-    @image = Image.find(params[:id])
   end
 
   def update
@@ -31,7 +17,7 @@ class ImagesController < ApplicationController
     if @image.update(image_params)
       redirect_to '/pages/admin_dashboard'
     else
-      render :new
+      redirect_to '/pages/admin_dashboard'
     end
   end
 

@@ -165,3 +165,7 @@ Component.create(name: 'referral_bonus', title: 'Referral Bonus', body: '
   <li> No call off for the first 90 days, regardless of the reason</li>
 </ul>
 ')
+
+Component.create(name: 'about_us', title: 'About Us', body: '
+<h2 class="title custom mb25">Learn More About Us</h2>
+')

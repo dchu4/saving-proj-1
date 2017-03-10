@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   before_action :authenticate_admin!, only: [:admin_dashboard]
 
   def about
+    @about_us = Component.find_by_name('about_us')
     @videos = Video.all
     @images = Image.all
   end
