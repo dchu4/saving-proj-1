@@ -1,11 +1,5 @@
 class VideosController < ApplicationController
-  def index
-    @videos = Video.all
-  end
-
-  def new
-    @video = Video.new
-  end
+  before_action :authenticate_admin!, only: [:create, :update, :delete]
 
   def create
     vp = video_params
@@ -20,16 +14,8 @@ class VideosController < ApplicationController
     if @video.save
       redirect_to '/pages/admin_dashboard'
     else
-      render :new
+      redirect_to '/pages/admin_dashboard'
     end
-  end
-
-  def show
-    @video = Video.find(params[:id])
-  end
-
-  def edit
-    @video = Video.find(params[:id])
   end
 
   def update
@@ -43,9 +29,9 @@ class VideosController < ApplicationController
     end
 
     if @video.update(video_params)
-      redirect_to request.referrer
+      redirect_to '/pages/admin_dashboard'
     else
-      render :edit
+      redirect_to '/pages/admin_dashboard'
     end
   end
 

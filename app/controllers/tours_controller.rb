@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
-  before_action :authenticate_admin!, only: [:index]
+  before_action :authenticate_admin!, only: [:index, :delete]
 
   def index
     @tours = Tour.all.order("id ASC")
@@ -15,22 +15,11 @@ class ToursController < ApplicationController
 
     if @tour.save
       ParamountMailer.tour_email(@tour).deliver_now
-      flash[:notice] = "Thank you for booking a tour! We will respond promptly."
-      redirect_to '/tours/new'
+      redirect_to '/tours/thank_you'
     else
       flash[:alert] = "Please include a name, valid email address, date, and time."
-      redirect_to '/tours/new'
+      render :new
     end
-  end
-
-  def show
-    @tour = Tour.find(params[:id])
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def destroy
@@ -38,7 +27,7 @@ class ToursController < ApplicationController
 
     tour.destroy
 
-    rneder :index
+    render :index
   end
 
   def thank_you
