@@ -133,3 +133,35 @@ Component.create(name: 'short_term_therapy', title: 'Short Term Therapy', body: 
   <p>Paramount is pleased to announce a new Pulmonary Rehabilitation wing opening in March 2017. Led by Pulmonologist, Dr. Brahma Gupta, Paramount will be opening a wing devoted to Tracheostomy care. Working hand in hand with Dr. Gupta, Paramount will provide the highest quality Pulmonary and Tracheostomy care.</p>
   <p><br style="color: rgb(66, 66, 66)"></p>
   ')
+
+Component.create(name: 'hiring_bonus', title: 'Hiring Bonus', body: '
+<h3 class="mb5 pt20">CNA-  $500.00, paid over a year, quarterly, if the following criteria is met:</h3>
+<ul class="mb10">
+  <li> Hired as a Full Time employee</li>
+  <li> Work your schedule as assigned</li>
+  <li> Any call off, regardless of reason, will disqualify payment of the bonus, for that quarter.</li>
+  <li> You will be eligible for the bonus, once a new quarter commences and above criteria is met.</li>
+</ul>
+<h3 class="mb5 pt20">LPN- $1000.00 paid over a year, quarterly, if the following criteria is met:</h3>
+<ul class="mb10">
+  <li> Hired as a Full Time employee</li>
+  <li> Work your schedule as assigned</li>
+  <li> Any call off, regardless of reason, will disqualify payment of the bonus, for that quarter.</li>
+  <li> You will be eligible for the bonus, once a new quarter commences and above criteria is met.</li>
+</ul>
+<h3 class="mb5 pt20">RN- $1500.00 paid over a year, quarterly, if the following criteria is met:</h3>
+<ul class="mb10">
+  <li> Hired as a Full Time employee</li>
+  <li> Work your schedule as assigned</li>
+  <li> Any call off, regardless of reason, will disqualify payment of the bonus, for that quarter.</li>
+  <li> You will be eligible for the bonus, once a new quarter commences and above criteria is met.</li>
+</ul>
+')
+
+Component.create(name: 'referral_bonus', title: 'Referral Bonus', body: '
+<h3 class="mb5 pt20">Any employee, who refers a candidate for a nursing position, and that candidate gets hired, FULL TIME, will be eligible for a $300.00 referral bonus,  if the following criteria is met by the newly hired employee:</h3>
+<ul>
+  <li> Work their assigned schedule</li>
+  <li> No call off for the first 90 days, regardless of the reason</li>
+</ul>
+')

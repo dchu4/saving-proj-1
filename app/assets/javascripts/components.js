@@ -1,5 +1,5 @@
 var options = {
-  fontNames: ['Raleway', 'Playfair Display'],
+  fontNames: ['Raleway'],
   height: 300,
   toolbar: [
     ['style', ['style']],
@@ -34,4 +34,3 @@ var cancel = function(componentDisplay, componentBody, componentEdit, componentS
   $(componentSave).addClass('invisible');
   $(componentCancel).addClass('invisible');
 };
-

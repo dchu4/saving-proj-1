@@ -1,21 +1,25 @@
 /*@import 'bootstrap';*/
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
+$green: #54B94A;
+$purple: #512E91;
+$light-purple: #B9ABD3;
+
 body, p, label, li, input, a {
   font-size: 1.7rem !important;
 }
 
 .admin-button {
-  background: #54B94A;
+  background: $green;
 }
 
 .admin-button:hover {
-  background: #512E91;
+  background: $purple;
 }
 
 .admin-button-lg {
-  width:100%;
-  margin-bottom: 5px;
+  @extend .admin-button;
+  width: 30%;
 }
 
 .checklist ul {
@@ -59,7 +63,7 @@ select {
   height: 34px;
   width: 100%;
   margin-bottom: 5px;
-  background: #fff;
+  background: white;
 }
 
 /*.field_with_errors {
@@ -74,6 +78,12 @@ select {
 
 footer {
   padding: 0 20px;
+  margin: 0;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
 }
 
 .links-widget {
@@ -85,7 +95,7 @@ footer {
 }
 
 .purplebg {
-  background-color: #B9ABD3;
+  background-color: $light-purple;
 }
 
 .button {
@@ -99,9 +109,18 @@ footer {
 }
 
 .tour-button {
-  background-color: #54B94A;
+  background-color: $green;
 }
 
 .tour-button:hover {
-  background-color: #B9ABD3;
+  background-color: $light-purple;
+}
+
+.min-height {
+  height: 40vh;
+}
+
+.thumb {
+  max-width: 360px;
+  max-height: 360px;
 }
