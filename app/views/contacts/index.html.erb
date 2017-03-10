@@ -1,6 +1,6 @@
 <div class="bg-custom text-white section-heading">
   <div class="container-fluid">
-    <h2 class="text-center">Applications</h2>
+    <h2 class="text-center">Contact Messages</h2>
   </div>
 </div>
 
@@ -13,11 +13,11 @@
           <td>Email:</td>
           <td>Delete:</td>
         </tr>
-        <% @careers.each do |career| %>
+        <% @contacts.each do |contact| %>
           <tr>
-            <td><%= career.full_name %></td>
-            <td><%= career.email %></td>
-            <td><%= link_to "Delete", "/careers/#{career.id}", :method => :delete %></td>
+            <td><%= link_to contact.first_name, "/contacts/#{contact.id}" %></td>
+            <td><%= contact.email %></td>
+            <td><%= link_to 'Delete', "/contacts/#{contact.id}", :method => :delete %></td>
           </tr>
         <% end %>
       </table>

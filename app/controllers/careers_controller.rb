@@ -4,6 +4,7 @@ class CareersController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
 
   def index
+    @careers = Career.all
   end
 
   def new
@@ -27,6 +28,13 @@ class CareersController < ApplicationController
   end
 
   def destroy
+    career = Career.find(params[:id])
+
+    if career.destroy
+      redirect_to "/careers"
+    else
+      redirect_to "/careers"
+    end
   end
 
   def thank_you

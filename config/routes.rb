@@ -24,7 +24,7 @@ Rails.application.routes.draw do
 
   resources :videos, only: [:create, :update, :destroy]
 
-  resources :contacts, only: [:create]
+  resources :contacts, only: [:index, :show, :create, :destroy]
 
   resources :components
 end
