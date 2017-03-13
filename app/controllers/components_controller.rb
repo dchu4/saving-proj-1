@@ -1,4 +1,5 @@
 class ComponentsController < ApplicationController
+  before_action :authenticate_admin!, only: [:update]
 
   def update
     @component = Component.find(params[:id])
