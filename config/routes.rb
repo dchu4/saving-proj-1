@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :careers, only: [:index, :new, :create, :show, :destroy]
 
   get '/tours/thank_you' => 'tours#thank_you'
-  resources :tours, only: [:index, :create]
+  resources :tours, only: [:index, :create, :destroy]
 
   resources :images, only: [:create, :update, :destroy]
 
