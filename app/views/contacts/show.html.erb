@@ -3,24 +3,21 @@
     <div class="col-sm-12 col-md-6 col-lg-6 col-lg-offset-3">
       <table class="table table-responsive table-bordered">
         <tr>
-          <td class="table-col-width"><b>Name:</b></td>
-        <!-- </tr>
-        <tr> -->
-          <td><p><%= @contact.first_name %></p></td>
+          <td class="col-md-3"><b>Name:</b></td>
+
+          <td class="col-md-6"><%= @contact.first_name %></td>
         </tr>
 
         <tr>
-          <td class="table-col-width"><b>Email:</b></td>
-        <!-- </tr>
-        <tr> -->
-          <td><p><%= @contact.email %></p></td>
+          <td class="col-md-3"><b>Email:</b></td>
+
+          <td class="col-md-6"><%= @contact.email %></td>
         </tr>
 
         <tr>
-          <td class="table-col-width"><b>Message:</b></td>
-        <!-- </tr>
-        <tr> -->
-          <td><p><%= @contact.message %></p></td>
+          <td class="col-md-3"><b>Message:</b></td>
+
+          <td class="col-md-6" style="max-width: 100px"><%= @contact.message %></td>
         </tr>
       </table>
     </div>
