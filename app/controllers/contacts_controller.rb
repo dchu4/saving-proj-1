@@ -27,10 +27,10 @@ class ContactsController < ApplicationController
 
     if contact.destroy
       flash[:notice] = "Delete Successful"
-      render :index
+      redirect_to '/contacts'
     else
       flash[:alert] = "Delete failed"
-      render :index
+      redirect_to '/contacts'
     end
   end
 

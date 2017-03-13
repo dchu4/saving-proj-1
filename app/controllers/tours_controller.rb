@@ -27,7 +27,7 @@ class ToursController < ApplicationController
 
     tour.destroy
 
-    render :index
+    redirect_to '/tours'
   end
 
   def thank_you
