@@ -22,7 +22,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
   end
 
-  def delete
+  def destroy
     contact = Contact.find(params[:id])
 
     if contact.destroy
