@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-  before_action :authenticate_admin!, only: [:create, :update, :delete]
+  before_action :authenticate_admin!, only: [:create, :update, :destroy]
 
   def create
     @image = Image.new(image_params)

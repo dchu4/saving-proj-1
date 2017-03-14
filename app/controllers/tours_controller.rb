@@ -1,6 +1,6 @@
 class ToursController < ApplicationController
   invisible_captcha only: [:create], honeypot: :subtitle
-  before_action :authenticate_admin!, only: [:index, :delete]
+  before_action :authenticate_admin!, only: [:index, :destroy]
 
   def index
     @tours = Tour.all.order("id ASC")
