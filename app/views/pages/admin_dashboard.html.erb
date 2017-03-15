@@ -18,7 +18,7 @@
   <div class="row">
 
     <!-- ========================== IMAGE START ============================= -->
-    <div class="col-md-6 col-sm-12 col-lg-6">
+    <div class="col-md-6 col-sm-12 col-lg-6 mb20">
       <h2 class="text-center mb20 pt20">Images</h2>
 
       <!-- Trigger the modal with a button -->
@@ -48,7 +48,7 @@
                     </div>
 
                     <div class="form-group">
-                      <%= f.label :image_source, 'Image Source:' %>
+                      <%= f.label :image_source, 'Image Source:' %> (only gif, jpeg, jpg, and png)
                       <%= f.file_field :image_source, class: 'form-control', id: 'imagePreview', accept: 'image/png,image/gif,image/jpeg' %>
                       <div id="preview"></div>
                     </div>
@@ -108,7 +108,7 @@
                           </div>
 
                           <div class="form-group">
-                            <%= f.label :image_source, 'Image Source:' %>
+                            <%= f.label :image_source, 'Image Source:' %> (only gif, jpeg, jpg, and png)
                             <%= f.file_field :image_source, class: 'form-control image-preview', id: "#{index}", accept: 'image/png,image/gif,image/jpeg' %>
                             <div class="preview"><%= image_tag image.image_source, class: 'thumb' %></div>
                           </div>
@@ -187,7 +187,7 @@
     <!-- ========================== IMAGE END ============================ -->
     
     <!-- ======================= VIDEO START ======================= -->
-    <div class="col-md-6 col-sm-12 col-lg-6">
+    <div class="col-md-6 col-sm-12 col-lg-6 mb20">
       <h2 class="text-center mb20 pt20">Videos</h2>
 
       <!-- =================== ADD VIDEO =================== -->
@@ -222,7 +222,7 @@
                     </div>
 
                     <div class="form-group">
-                      <%= f.label :video_source, 'Video Source:' %>
+                      <%= f.label :video_source, 'Video Source:' %> (only youtube links)
                       <%= f.text_field :video_source, class: 'form-control', id: 'videoPreview' %>
                       <div id="thumbnail"></div>
                     </div>
@@ -283,7 +283,7 @@
                         </div>
 
                         <div class="form-group">
-                          <%= f.label :video_source, 'Video Source:' %>
+                          <%= f.label :video_source, 'Video Source:' %> (only youtube links)
                           <%= f.text_field :video_source, class: 'form-control', id: "videoPreview#{index}" %>
                           <div class="text-center"><button type="button" class="button admin-button text-white" onclick="changeVideo(<%= index %>)">Preview</button></div>
                           <div id="thumbnail<%= index %>" class="text-center"><img src="https://img.youtube.com/vi/<%= video.video_source[30, video.video_source.length] %>/hqdefault.jpg" class="thumb"></div>
