@@ -28,90 +28,89 @@
   </div>
 <% end %>
 
-<div class="container section-wrapper mb30 pt40">
-  <div class="row">
+<div class="container mb30 pt40">
+  <div class="row section-wrapper">
     <h3 class="text-center mb30">Apply Today</h3>
       
-      <%= form_for @career do |f| %>
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :job_role, 'Job Role:' %><br>
-            <%= f.select :job_role, options_for_select(job_roles), class: 'form-control' %>
-          </div>
+    <%= form_for @career do |f| %>
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :job_role, 'Job Role:' %><span class="text-required">*</span><br>
+          <%= f.select :job_role, options_for_select(job_roles), class: 'form-control' %>
         </div>
-        
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <%= f.label :first_name, 'First Name:' %>
-            <%= f.text_field :first_name, class: 'form-control' %>
-          </div>
-
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <%= f.label :middle_name, 'Middle Name (optional):' %>
-            <%= f.text_field :middle_name, class: 'form-control' %>
-          </div>
-        
-          <div class="col-sm-12 col-md-4 col-lg-4">
-            <%= f.label :last_name, 'Last Name:' %>
-            <%= f.text_field :last_name, class: 'form-control' %>
-          </div>
-        </div>
-        
-        <div class="form-group">
-          <%= f.label :phone_number, 'Phone #:' %>
-          <%= f.text_field :phone_number, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <%= f.label :first_name, 'First Name:' %><span class="text-required">*</span>
+          <%= f.text_field :first_name, class: 'form-control' %>
         </div>
 
-        <div class="form-group">
-          <%= f.label :email, 'Email Address:' %>
-          <%= f.email_field :email, class: 'form-control' %>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <%= f.label :middle_name, 'Middle Name:' %>
+          <%= f.text_field :middle_name, class: 'form-control' %>
         </div>
-        
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-12 col-lg-9">
-            <%= f.label :street_address, 'Address:' %>
-            <%= f.text_field :street_address, class: 'form-control' %>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :apt_number, 'Apt/Unit # (optional):' %>
-            <%= f.text_field :apt_number, class: 'form-control' %>
-          </div>
+      
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <%= f.label :last_name, 'Last Name:' %><span class="text-required">*</span>
+          <%= f.text_field :last_name, class: 'form-control' %>
         </div>
-        
-        <div class="form-group row">
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :city, 'City:' %>
-            <%= f.text_field :city, class: 'form-control' %>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :state, 'State:', class: 'form' %><br>
-            <%= f.select :state, options_for_select(us_states), class: 'form-control' %>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :zip_code, 'Zip Code:'%>
-            <%= f.text_field :zip_code, class: 'form-control' %>
-          </div>
-          <div class="col-sm-12 col-md-12 col-lg-3">
-            <%= f.label :country, 'Country:' %>
-            <%= f.text_field :country, class: 'form-control' %>
-          </div>
-        </div>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :phone_number, 'Phone #:' %><span class="text-required">*</span>
+        <%= f.text_field :phone_number, class: 'form-control' %>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :resume, 'Upload Resume (pdf, docx, rtf, odt only):' %>
-          <%= f.file_field :resume, class: 'form-control-file' %>
+      <div class="form-group">
+        <%= f.label :email, 'Email Address:' %><span class="text-required">*</span>
+        <%= f.email_field :email, class: 'form-control' %>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-12 col-lg-9">
+          <%= f.label :street_address, 'Address:' %><span class="text-required">*</span>
+          <%= f.text_field :street_address, class: 'form-control' %>
         </div>
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :apt_number, 'Apt/Unit #:' %>
+          <%= f.text_field :apt_number, class: 'form-control' %>
+        </div>
+      </div>
+      
+      <div class="form-group row">
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :city, 'City:' %><span class="text-required">*</span>
+          <%= f.text_field :city, class: 'form-control' %>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :state, 'State:', class: 'form' %><span class="text-required">*</span><br>
+          <%= f.select :state, options_for_select(us_states), class: 'form-control' %>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :zip_code, 'Zip Code:'%><span class="text-required">*</span>
+          <%= f.text_field :zip_code, class: 'form-control' %>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-3">
+          <%= f.label :country, 'Country:' %><span class="text-required">*</span>
+          <%= f.text_field :country, class: 'form-control' %>
+        </div>
+      </div>
 
-        <div class="form-group">
-          <%= f.label :referral, 'Name of Referrer (optional):' %>
-          <%= f.text_field :referral, class: 'form-control' %>
-        </div>
+      <div class="form-group">
+        <%= f.label :resume, 'Upload Resume (pdf, docx, rtf, odt only):' %><span class="text-required">*</span>
+        <%= f.file_field :resume, class: 'form-control-file' %>
+      </div>
 
-        <div class="form-group text-center">
-          <%= f.invisible_captcha :subtitle %>
-          <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
-        </div>
-      <% end %>
-    </div>
+      <div class="form-group">
+        <%= f.label :referral, 'Name of Referrer:' %>
+        <%= f.text_field :referral, class: 'form-control' %>
+      </div>
+
+      <div class="form-group text-center">
+        <%= f.invisible_captcha :subtitle %>
+        <%= f.submit 'Apply', class: "btn btn-lg btn-custom2 min-width tp-resizeme" %>
+      </div>
+    <% end %>
   </div>
 </div>

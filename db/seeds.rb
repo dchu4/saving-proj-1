@@ -125,7 +125,6 @@ Component.create(name: 'therapy', title: 'Therapy', body: '
   ')
 
 Component.create(name: 'short_term_therapy', title: 'Short Term Therapy', body: '
-  <h3 class="title text-center">Short Term Therapy</h3>
   <p>Paramount of Oak Park welcomes many residents who only stay with us for a short time.</p>
   <p>We have designed a state-of-the-art therapy unit, with the focus on our residents who require a short term stay. No matter how long our residents stay with us, we proudly offer the finest in health care, social services, and all types of rehabilitative therapy.</p>
   <p>Paramount of Oak Park features a brand new wing for short term Rehabilitation. The brand new rooms have been redesigned for a comfortable short term stay. Our new wing also consists of a private dining room and access to the new walk in tub.</p>
