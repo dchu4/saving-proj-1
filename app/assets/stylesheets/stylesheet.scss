@@ -107,9 +107,9 @@ footer {
   min-height: 27vh;
 }
 
-.text-required {
-  color: red;
-  font-size: 1.5rem;
+.text-required:after {
+  content:"*";
+  color:red;
 }
 
 .tour-button {

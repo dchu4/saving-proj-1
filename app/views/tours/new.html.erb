@@ -28,20 +28,20 @@
   </div>
 <% end %>
 
-<div class="section-wrapper">
-  <div class="row">
+<div class="container pt20">
+  <div class="row section-wrapper">
     <div class="col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
       
       <%= form_for @tour do |f| %>
         <div class="form-group row">
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <%= f.label :first_name, 'First Name:' %>
+            <%= f.label :first_name, 'First Name:', class: 'text-required' %>
             <%= f.text_field :first_name, class: 'form-control' %>
           </div>
         </div>
 
         <div class="form-group">
-          <%= f.label :email, 'Email Address:' %>
+          <%= f.label :email, 'Email Address:', class: 'text-required' %>
           <%= f.email_field :email, class: 'form-control' %>
         </div>
         
@@ -50,14 +50,14 @@
 
           <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
-              <%= f.label :tour_date, 'Tour Date:' %>
+              <%= f.label :tour_date, 'Tour Date:', class: 'text-required' %>
               <%= f.text_field :tour_date, class: 'form-control flatpickr_calendar flatpickr-input', placeholder: "Select A Date..." %>
             </div>
           </div>
 
           <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="form-group">
-              <%= f.label :tour_time, 'Tour Time:' %>
+              <%= f.label :tour_time, 'Tour Time:', class: 'text-required' %>
               <%= f.text_field :tour_time, class: 'form-control flatpickr_time flatpickr-input', placeholder: "Select A Time..." %>
             </div>
           </div>

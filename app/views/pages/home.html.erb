@@ -256,7 +256,7 @@
           </div><!-- End .col-md-2 -->
           <div class="col-lg-2 col-md-2 col-sm-12">
             <%= f.label :tour_time %>
-            <%= f.text_field :tour_time, class: "form-control flatpickr_time", placeholder: "Select Time.." %>
+            <%= f.text_field :tour_time, class: "form-control flatpickr_time", placeholder: "Select Time..", "data-alt-input" => "true", "data-alt-format" => "h:i K" %>
           </div><!-- End .col-md-2 -->
           <div class="col-lg-2 col-md-2 col-sm-12" style="margin-top: 27px">
             <%= f.invisible_captcha :subtitle %>

@@ -35,19 +35,19 @@
       <%= form_for :contact, url: contacts_path do |f| %>
         <div class="row">
           <div class="col-md-7">
-            <%= f.label :first_name, "First Name:" %>
+            <%= f.label :first_name, "First Name:", class: 'text-required' %>
             <%= f.text_field :first_name, class: "form-control" %>
           </div><!-- End .col-md-7 -->
         </div><!-- End .row -->
         <div class="row">
           <div class="col-md-7">
-            <%= f.label :email, "Email:" %>
+            <%= f.label :email, "Email:", class: 'text-required' %>
             <%= f.text_field :email, class: "form-control" %>
           </div><!-- End .col-md-7 -->
         </div><!-- End .row -->
         <div class="row">
           <div class="col-md-7">
-            <%= f.label :message, "Message:" %>
+            <%= f.label :message, "Message:", class: 'text-required' %>
             <%= f.text_area :message, class: "form-control" %>
           </div><!-- End .col-md-7 -->
         </div><!-- End .row -->

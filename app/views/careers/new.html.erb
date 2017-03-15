@@ -35,14 +35,14 @@
     <%= form_for @career do |f| %>
       <div class="form-group row">
         <div class="col-sm-12 col-md-12 col-lg-3">
-          <%= f.label :job_role, 'Job Role:' %><span class="text-required">*</span><br>
+          <%= f.label :job_role, 'Job Role:', class: 'text-required' %><br>
           <%= f.select :job_role, options_for_select(job_roles), class: 'form-control' %>
         </div>
       </div>
       
       <div class="form-group row">
         <div class="col-sm-12 col-md-4 col-lg-4">
-          <%= f.label :first_name, 'First Name:' %><span class="text-required">*</span>
+          <%= f.label :first_name, 'First Name:', class: 'text-required' %>
           <%= f.text_field :first_name, class: 'form-control' %>
         </div>
 
@@ -52,24 +52,24 @@
         </div>
       
         <div class="col-sm-12 col-md-4 col-lg-4">
-          <%= f.label :last_name, 'Last Name:' %><span class="text-required">*</span>
+          <%= f.label :last_name, 'Last Name:', class: 'text-required' %>
           <%= f.text_field :last_name, class: 'form-control' %>
         </div>
       </div>
       
       <div class="form-group">
-        <%= f.label :phone_number, 'Phone #:' %><span class="text-required">*</span>
+        <%= f.label :phone_number, 'Phone #:', class: 'text-required' %>
         <%= f.text_field :phone_number, class: 'form-control' %>
       </div>
 
       <div class="form-group">
-        <%= f.label :email, 'Email Address:' %><span class="text-required">*</span>
+        <%= f.label :email, 'Email Address:', class: 'text-required' %>
         <%= f.email_field :email, class: 'form-control' %>
       </div>
       
       <div class="form-group row">
         <div class="col-sm-12 col-md-12 col-lg-9">
-          <%= f.label :street_address, 'Address:' %><span class="text-required">*</span>
+          <%= f.label :street_address, 'Address:', class: 'text-required' %>
           <%= f.text_field :street_address, class: 'form-control' %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3">
@@ -80,25 +80,25 @@
       
       <div class="form-group row">
         <div class="col-sm-12 col-md-12 col-lg-3">
-          <%= f.label :city, 'City:' %><span class="text-required">*</span>
+          <%= f.label :city, 'City:', class: 'text-required' %>
           <%= f.text_field :city, class: 'form-control' %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3">
-          <%= f.label :state, 'State:', class: 'form' %><span class="text-required">*</span><br>
+          <%= f.label :state, 'State:', class: 'form text-required' %><br>
           <%= f.select :state, options_for_select(us_states), class: 'form-control' %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3">
-          <%= f.label :zip_code, 'Zip Code:'%><span class="text-required">*</span>
+          <%= f.label :zip_code, 'Zip Code:', class: 'text-required'%>
           <%= f.text_field :zip_code, class: 'form-control' %>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-3">
-          <%= f.label :country, 'Country:' %><span class="text-required">*</span>
+          <%= f.label :country, 'Country:', class: 'text-required' %>
           <%= f.text_field :country, class: 'form-control' %>
         </div>
       </div>
 
       <div class="form-group">
-        <%= f.label :resume, 'Upload Resume (pdf, docx, rtf, odt only):' %><span class="text-required">*</span>
+        <%= f.label :resume, 'Upload Resume (pdf, docx, rtf, odt only):', class: 'text-required' %>
         <%= f.file_field :resume, class: 'form-control-file' %>
       </div>
 
